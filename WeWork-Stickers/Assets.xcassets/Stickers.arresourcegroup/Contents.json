@@ -1,0 +1,35 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "chicago.arreferenceimage"
+    },
+    {
+      "filename" : "frankfurt.arreferenceimage"
+    },
+    {
+      "filename" : "newYork.arreferenceimage"
+    },
+    {
+      "filename" : "pride.arreferenceimage"
+    },
+    {
+      "filename" : "pride2.arreferenceimage"
+    },
+    {
+      "filename" : "sanFrancisco.arreferenceimage"
+    },
+    {
+      "filename" : "saoPaulo.arreferenceimage"
+    },
+    {
+      "filename" : "telAviv.arreferenceimage"
+    },
+    {
+      "filename" : "weWork.arreferenceimage"
+    }
+  ]
+}

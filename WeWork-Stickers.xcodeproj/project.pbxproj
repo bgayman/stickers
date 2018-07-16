@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */; };
+		CD70439420FC274600A2128C /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = CD70439220FC274600A2128C /* smoke.png */; };
+		CD70439520FC274600A2128C /* Fog.scnp in Resources */ = {isa = PBXBuildFile; fileRef = CD70439320FC274600A2128C /* Fog.scnp */; };
 		CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */; };
 		CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9330D20FAB5DB005EC774 /* art.scnassets */; };
 		CDF9331020FAB5DB005EC774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330F20FAB5DB005EC774 /* ViewController.swift */; };
@@ -16,6 +19,35 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
+		CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
+		CD4BD01C20FC4156009B522F /* SHKWater.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
+		CD4BD01D20FC4156009B522F /* SHKStaticGrayNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKStaticGrayNoise.fsh; sourceTree = "<group>"; };
+		CD4BD01E20FC4156009B522F /* SHKCircleWave.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWave.fsh; sourceTree = "<group>"; };
+		CD4BD01F20FC4156009B522F /* SHKColorInvert.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKColorInvert.fsh; sourceTree = "<group>"; };
+		CD4BD02020FC4156009B522F /* SHKEmbossColor.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKEmbossColor.fsh; sourceTree = "<group>"; };
+		CD4BD02120FC4156009B522F /* SHKRadialGradient.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKRadialGradient.fsh; sourceTree = "<group>"; };
+		CD4BD02220FC4156009B522F /* SHKLightGrid.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKLightGrid.fsh; sourceTree = "<group>"; };
+		CD4BD02320FC4156009B522F /* SHKLinearGradient.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKLinearGradient.fsh; sourceTree = "<group>"; };
+		CD4BD02420FC4156009B522F /* SHKColorAlpha.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKColorAlpha.fsh; sourceTree = "<group>"; };
+		CD4BD02520FC4156009B522F /* SHKCircleWaveBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveBlended.fsh; sourceTree = "<group>"; };
+		CD4BD02620FC4156009B522F /* SHKEmbossGray.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKEmbossGray.fsh; sourceTree = "<group>"; };
+		CD4BD02720FC4156009B522F /* SHKInterlace.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInterlace.fsh; sourceTree = "<group>"; };
+		CD4BD02820FC4156009B522F /* SHKPixelate.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKPixelate.fsh; sourceTree = "<group>"; };
+		CD4BD02920FC4156009B522F /* SHKStaticRainbowNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKStaticRainbowNoise.fsh; sourceTree = "<group>"; };
+		CD4BD02A20FC4156009B522F /* SHKColorize.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKColorize.fsh; sourceTree = "<group>"; };
+		CD4BD02B20FC4156009B522F /* SHKPassthrough.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKPassthrough.fsh; sourceTree = "<group>"; };
+		CD4BD02C20FC4156009B522F /* SHKDynamicGrayNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKDynamicGrayNoise.fsh; sourceTree = "<group>"; };
+		CD4BD02D20FC4156009B522F /* SHKCircleWaveRainbow.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbow.fsh; sourceTree = "<group>"; };
+		CD4BD02E20FC4156009B522F /* SHKScreen.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKScreen.fsh; sourceTree = "<group>"; };
+		CD4BD02F20FC4156009B522F /* SHKDynamicRainbowNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKDynamicRainbowNoise.fsh; sourceTree = "<group>"; };
+		CD4BD03020FC4156009B522F /* SHKDesaturate.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKDesaturate.fsh; sourceTree = "<group>"; };
+		CD4BD03120FC4156009B522F /* SHKColorNonAlpha.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKColorNonAlpha.fsh; sourceTree = "<group>"; };
+		CD4BD03220FC4156009B522F /* SHKScanlines.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKScanlines.fsh; sourceTree = "<group>"; };
+		CD4BD03320FC4156009B522F /* SHKCheckerboard.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCheckerboard.fsh; sourceTree = "<group>"; };
+		CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderKitExtensions.swift; sourceTree = "<group>"; };
+		CD70439220FC274600A2128C /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
+		CD70439320FC274600A2128C /* Fog.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Fog.scnp; sourceTree = "<group>"; };
 		CDF9330820FAB5DB005EC774 /* WeWork-Stickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeWork-Stickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF9330D20FAB5DB005EC774 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -37,6 +69,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4BD01920FC4156009B522F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */,
+				CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */,
+				CD4BD01C20FC4156009B522F /* SHKWater.fsh */,
+				CD4BD01D20FC4156009B522F /* SHKStaticGrayNoise.fsh */,
+				CD4BD01E20FC4156009B522F /* SHKCircleWave.fsh */,
+				CD4BD01F20FC4156009B522F /* SHKColorInvert.fsh */,
+				CD4BD02020FC4156009B522F /* SHKEmbossColor.fsh */,
+				CD4BD02120FC4156009B522F /* SHKRadialGradient.fsh */,
+				CD4BD02220FC4156009B522F /* SHKLightGrid.fsh */,
+				CD4BD02320FC4156009B522F /* SHKLinearGradient.fsh */,
+				CD4BD02420FC4156009B522F /* SHKColorAlpha.fsh */,
+				CD4BD02520FC4156009B522F /* SHKCircleWaveBlended.fsh */,
+				CD4BD02620FC4156009B522F /* SHKEmbossGray.fsh */,
+				CD4BD02720FC4156009B522F /* SHKInterlace.fsh */,
+				CD4BD02820FC4156009B522F /* SHKPixelate.fsh */,
+				CD4BD02920FC4156009B522F /* SHKStaticRainbowNoise.fsh */,
+				CD4BD02A20FC4156009B522F /* SHKColorize.fsh */,
+				CD4BD02B20FC4156009B522F /* SHKPassthrough.fsh */,
+				CD4BD02C20FC4156009B522F /* SHKDynamicGrayNoise.fsh */,
+				CD4BD02D20FC4156009B522F /* SHKCircleWaveRainbow.fsh */,
+				CD4BD02E20FC4156009B522F /* SHKScreen.fsh */,
+				CD4BD02F20FC4156009B522F /* SHKDynamicRainbowNoise.fsh */,
+				CD4BD03020FC4156009B522F /* SHKDesaturate.fsh */,
+				CD4BD03120FC4156009B522F /* SHKColorNonAlpha.fsh */,
+				CD4BD03220FC4156009B522F /* SHKScanlines.fsh */,
+				CD4BD03320FC4156009B522F /* SHKCheckerboard.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		CDF932FF20FAB5DB005EC774 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */,
+				CD70439220FC274600A2128C /* smoke.png */,
+				CD70439320FC274600A2128C /* Fog.scnp */,
 				CDF9330D20FAB5DB005EC774 /* art.scnassets */,
 				CDF9330F20FAB5DB005EC774 /* ViewController.swift */,
+				CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */,
+				CD4BD01920FC4156009B522F /* Shaders */,
 				CDF9331120FAB5DB005EC774 /* Main.storyboard */,
 				CDF9331420FAB5DD005EC774 /* Assets.xcassets */,
 				CDF9331620FAB5DD005EC774 /* LaunchScreen.storyboard */,
@@ -127,7 +196,9 @@
 			files = (
 				CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */,
 				CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */,
+				CD70439420FC274600A2128C /* smoke.png in Resources */,
 				CDF9331520FAB5DD005EC774 /* Assets.xcassets in Resources */,
+				CD70439520FC274600A2128C /* Fog.scnp in Resources */,
 				CDF9331320FAB5DB005EC774 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */,
 				CDF9331020FAB5DB005EC774 /* ViewController.swift in Sources */,
 				CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */,
 			);
