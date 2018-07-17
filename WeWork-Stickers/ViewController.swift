@@ -10,6 +10,11 @@ import UIKit
 import SceneKit
 import ARKit
 
+protocol SceneManager {
+    func makeScene() -> SCNScene
+    func animateOn(node: SCNNode)
+}
+
 struct ARImageGroupName {
     static let stickers = "Stickers"
 }
@@ -22,9 +27,44 @@ struct ARScenesBuilder {
     static func makeSanFranciscoScene() -> SCNScene {
         return SCNScene(named: "art.scnassets/sanFranciscoScene.scn")!
     }
+    
+    static func makeNewYorkScene() -> SCNScene {
+        return SCNScene(named: "art.scnassets/newYorkScene.scn")!
+    }
 }
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+final class NewYorkSceneManager: NSObject, SceneManager {
+
+    func makeScene() -> SCNScene {
+        return ARScenesBuilder.makeNewYorkScene()
+    }
+    
+    func animateOn(node: SCNNode) {
+        guard
+            let text = node.childNode(withName: "text", recursively: true),
+            let weWorkText = text.childNode(withName: "weWorkText", recursively: true),
+            let newYorkText = text.childNode(withName: "newYorkText", recursively: true),
+            let city = node.childNode(withName: "city", recursively: true)
+        else { return }
+        
+        SCNTransaction.begin()
+        SCNTransaction.animationDuration = 0.5
+        weWorkText.childNodes.forEach {
+            $0.scale  = SCNVector3(1, 1, 1)
+        }
+        newYorkText.childNodes.forEach {
+            $0.scale = SCNVector3(1, 1, 1)
+        }
+        city.childNodes.forEach {
+            $0.scale = SCNVector3(1, 2.5, 1)
+        }
+        SCNTransaction.completionBlock = {}
+        SCNTransaction.commit()
+    }
+}
+
+
+final class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     static var count = 0
@@ -74,11 +114,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let anchor = anchor as? ARImageAnchor else { return nil }
         print(anchor.name ?? "NoName")
         if anchor.name == "sanFrancisco" {
-            let scene = ARScenesBuilder.makeSanFranciscoScene()
+            let sceneManager = SanFranciscoSceneManager()
+            let scene = sceneManager.makeScene()
             let bridge = scene.rootNode.childNode(withName: "bridge", recursively: true)
             bridge?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.animateOn(node: scene.rootNode)
+                sceneManager.animateOn(node: scene.rootNode)
+            }
+            return scene.rootNode
+        } else if anchor.name == "newYork" {
+            let sceneManager = NewYorkSceneManager()
+            let scene = sceneManager.makeScene()
+            let text = scene.rootNode.childNode(withName: "text", recursively: true)
+            let city = scene.rootNode.childNode(withName: "city", recursively: true)
+            text?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
+            city?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                sceneManager.animateOn(node: scene.rootNode)
             }
             return scene.rootNode
         }
@@ -86,108 +138,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return scene.rootNode
     }
     
-    func animateOn(node: SCNNode) {
-        guard
-            let light = node.childNode(withName: "light", recursively: true),
-            let light2 = node.childNode(withName: "light2", recursively: true),
-            let fog = node.childNode(withName: "fog", recursively: true),
-            let fog2 = node.childNode(withName: "fog2", recursively: true),
-            let bridge = node.childNode(withName: "bridge", recursively: true)
-        else { return }
-        light.scale = SCNVector3Zero
-        light2.scale = SCNVector3Zero
-        SCNTransaction.begin()
-        SCNTransaction.animationDuration = 1.0
-        for node in bridge.childNodes {
-            node.scale = SCNVector3(1.1, 1.0, 1.0)
-        }
-        
-        SCNTransaction.completionBlock = {
-            self.animateLights(node: node)
-            self.animateText(node: node)
-        }
-        light.scale = SCNVector3(1.0, 1.0, 1.0)
-        light2.scale = SCNVector3(1.0, 1.0, 1.0)
-        
-        SCNTransaction.commit()
-        
-        let fogSystem = SCNParticleSystem(named: "Fog.scnp", inDirectory: nil)!
-        let fogSystem2 = SCNParticleSystem(named: "Fog.scnp", inDirectory: nil)!
-        fog.addParticleSystem(fogSystem)
-        fog2.addParticleSystem(fogSystem2)
-    }
     
-    func animateLights(node: SCNNode) {
-        guard let light = node.childNode(withName: "light", recursively: true),
-            let light2 = node.childNode(withName: "light2", recursively: true) else { return }
-        let material = light.geometry!.firstMaterial!
-        let material2 = light2.geometry!.firstMaterial!
-        
-        // highlight it
-        SCNTransaction.begin()
-        SCNTransaction.animationDuration = 1.5
-        
-        // on completion - unhighlight
-        SCNTransaction.completionBlock = {
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 2.5
-            material.emission.contents = UIColor.black
-            material2.emission.contents = UIColor.black
-            SCNTransaction.completionBlock = { [unowned self] in
-                self.animateLights(node: node)
-            }
-            
-            SCNTransaction.commit()
-        }
-        
-        material.emission.contents = UIColor.red
-        material2.emission.contents = UIColor.red
-        
-        SCNTransaction.commit()
-    }
-    
-    func animateText(node: SCNNode) {
-        guard
-            let weWorkText = node.childNode(withName: "weWorkText", recursively: true),
-            let w = weWorkText.childNode(withName: "W", recursively: true),
-            let e = weWorkText.childNode(withName: "E", recursively: true),
-            let w2 = weWorkText.childNode(withName: "W2", recursively: true),
-            let o = weWorkText.childNode(withName: "O", recursively: true),
-            let r = weWorkText.childNode(withName: "R", recursively: true),
-            let k = weWorkText.childNode(withName: "K", recursively: true)
-        else { return }
-        
-        let letters = [w, e, w2, o, r, k]
-        let letter = letters[ViewController.count % letters.count]
-        let material = letter.geometry?.firstMaterial
-        // highlight it
-        SCNTransaction.begin()
-        SCNTransaction.animationDuration = 0.75
-        
-        // on completion - unhighlight
-        SCNTransaction.completionBlock = {
-            ViewController.count += 1
-            if ViewController.count >= letters.count && ViewController.count % letters.count == 0 {
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.75
-                letters.forEach {
-                    $0.geometry?.firstMaterial?.emission.contents = UIColor.black
-                }
-                SCNTransaction.completionBlock = { [unowned self] in
-                    self.animateText(node: node)
-                }
-                
-                SCNTransaction.commit()
-            } else {
-                self.animateText(node: node)
-            }
-            
-        }
-        
-        material?.emission.contents = UIColor.white
-        
-        SCNTransaction.commit()
-    }
 
     
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -203,5 +154,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
+    }
+}
+
+extension SCNNode {
+    func blur() {
+        let gaussianBlurFilter = CIFilter(name: "CIGaussianBlur")!
+        gaussianBlurFilter.name = "blur"
+        gaussianBlurFilter.setValue(2.0, forKey: "inputRadius")
+        filters = (filters ?? []) + [gaussianBlurFilter]
     }
 }
