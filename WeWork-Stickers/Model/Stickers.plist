@@ -20,6 +20,12 @@
 		<string>chicagoSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Chicago</string>
+		<key>textureName</key>
+		<string>chicagoTexture.png</string>
+		<key>width</key>
+		<real>0.0508</real>
+		<key>height</key>
+		<real>0.05031</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -39,6 +45,12 @@
 		<string>frankfurtSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Frankfurt</string>
+		<key>textureName</key>
+		<string>frankfurtTexture.png</string>
+		<key>width</key>
+		<real>0.070461</real>
+		<key>height</key>
+		<real>0.0762</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -58,6 +70,12 @@
 		<string>monterreySticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Monterrey</string>
+		<key>textureName</key>
+		<string>monterreyTexture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.07068099999999999</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -77,6 +95,12 @@
 		<string>montrealSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Montreal</string>
+		<key>textureName</key>
+		<string>montrealTexture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.076948</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -96,6 +120,12 @@
 		<string>newYorkSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/New_York_City</string>
+		<key>textureName</key>
+		<string>newYorkTexture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.075741</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -115,6 +145,12 @@
 		<string>parisSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Paris</string>
+		<key>textureName</key>
+		<string>parisTexture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.07492799999999999</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -127,6 +163,12 @@
 		<string>prideSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Gay_pride</string>
+		<key>textureName</key>
+		<string>prideTexture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.047004</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -139,6 +181,12 @@
 		<string>prideHeartSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Rainbow_flag_(LGBT_movement)</string>
+		<key>textureName</key>
+		<string>pride2Texture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.066106</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -158,6 +206,12 @@
 		<string>sanFranciscoSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/San_Francisco</string>
+		<key>textureName</key>
+		<string>pride2Texture.png</string>
+		<key>width</key>
+		<real>0.0762</real>
+		<key>height</key>
+		<real>0.038576</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -176,7 +230,13 @@
 		<key>imageName</key>
 		<string>saoPauloSticker</string>
 		<key>wikiLink</key>
-		<string>https://en.wikipedia.org/wiki/São_Paulo</string>
+		<string>https://en.wikipedia.org/wiki/Sao_Paulo</string>
+		<key>textureName</key>
+		<string>saoPauloTexture.png</string>
+		<key>width</key>
+		<real>0.057149</real>
+		<key>height</key>
+		<real>0.076751</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -196,6 +256,12 @@
 		<string>telAvivSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/Tel_Aviv</string>
+		<key>textureName</key>
+		<string>telAvivTexture.png</string>
+		<key>width</key>
+		<real>0.05842</real>
+		<key>height</key>
+		<real>0.071835</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -215,6 +281,12 @@
 		<string>weWorkSticker</string>
 		<key>wikiLink</key>
 		<string>https://en.wikipedia.org/wiki/WeWork</string>
+		<key>textureName</key>
+		<string>weWorkTexture.png</string>
+		<key>width</key>
+		<real>0.0508</real>
+		<key>height</key>
+		<real>0.071835</real>
 	</dict>
 </array>
 </plist>

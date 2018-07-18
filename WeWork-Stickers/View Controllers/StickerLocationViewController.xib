@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickerLocationViewController" customModule="WeWork_Stickers" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="aXk-ZT-PzD" id="FJ2-OT-dd7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="mutedStandard" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-ZT-PzD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="rMe-vQ-lxb"/>
+                    </connections>
+                </mapView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-y5-DtJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="INn-yZ-WuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aXk-ZT-PzD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BKD-g6-OK9"/>
+                <constraint firstItem="NPG-y5-DtJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C7r-4n-QSe"/>
+                <constraint firstAttribute="trailing" secondItem="NPG-y5-DtJ" secondAttribute="trailing" id="Dm0-jq-NQQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="NPG-y5-DtJ" secondAttribute="bottom" id="VwQ-lA-Mk7"/>
+                <constraint firstAttribute="trailing" secondItem="aXk-ZT-PzD" secondAttribute="trailing" id="cWU-kF-JnN"/>
+                <constraint firstItem="NPG-y5-DtJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fKb-vz-WoE"/>
+                <constraint firstItem="aXk-ZT-PzD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tTu-Ae-m2r"/>
+                <constraint firstAttribute="bottom" secondItem="aXk-ZT-PzD" secondAttribute="bottom" id="yp3-kF-rJd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

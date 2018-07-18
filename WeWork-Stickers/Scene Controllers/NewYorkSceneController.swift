@@ -12,10 +12,11 @@ final class NewYorkSceneController: NSObject, SceneController {
     static var count = 0
 
     func prepare(node: SCNNode) {
-        let text = node.childNode(withName: "text", recursively: true)
-        let city = node.childNode(withName: "city", recursively: true)
-        let cityText = node.childNode(withName: "cityText", recursively: true)
-        let lights = node.childNode(withName: "lights", recursively: true)
+        let root = node.childNode(withName: "plane", recursively: true)
+        let text = root?.childNode(withName: "text", recursively: true)
+        let city = root?.childNode(withName: "city", recursively: true)
+        let cityText = root?.childNode(withName: "cityText", recursively: true)
+        let lights = root?.childNode(withName: "lights", recursively: true)
         text?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
         city?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
         cityText?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
@@ -28,17 +29,18 @@ final class NewYorkSceneController: NSObject, SceneController {
     }
     
     func animateOn(node: SCNNode) {
+        let root = node.childNode(withName: "plane", recursively: true)
         guard
-            let text = node.childNode(withName: "text", recursively: true),
+            let text = root?.childNode(withName: "text", recursively: true),
             let weWorkText = text.childNode(withName: "weWorkText", recursively: true),
             let newYorkText = text.childNode(withName: "newYorkText", recursively: true),
-            let city = node.childNode(withName: "city", recursively: true),
-            let cityText = node.childNode(withName: "cityText", recursively: true),
-            let frame = node.childNode(withName: "frame", recursively: true)
+            let city = root?.childNode(withName: "city", recursively: true),
+            let cityText = root?.childNode(withName: "cityText", recursively: true),
+            let frame = root?.childNode(withName: "frame", recursively: true)
         else { return }
         
         SCNTransaction.begin()
-        SCNTransaction.animationDuration = 0.5
+        SCNTransaction.animationDuration = 0.2
         weWorkText.childNodes.forEach {
             $0.scale  = SCNVector3(1, 1, 1)
         }
@@ -67,8 +69,9 @@ final class NewYorkSceneController: NSObject, SceneController {
     }
     
     func animateLights(node: SCNNode) {
+        let root = node.childNode(withName: "plane", recursively: true)
         guard
-            let lights = node.childNode(withName: "lights", recursively: true)
+            let lights = root?.childNode(withName: "lights", recursively: true)
         else { return }
         
         let num = "\(NewYorkSceneController.count % 4)"

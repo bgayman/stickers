@@ -7,8 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A721FDF220FFEA3600BD7268 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF120FFEA3600BD7268 /* SelfieViewController.swift */; };
+		A721FDF420FFEB1500BD7268 /* VitualContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */; };
+		A721FDF620FFEB4500BD7268 /* VirualContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF520FFEB4500BD7268 /* VirualContentType.swift */; };
+		A721FDF820FFEC4C00BD7268 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF720FFEC4C00BD7268 /* StatusViewController.swift */; };
+		A721FDFA20FFECC800BD7268 /* VirtualFaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF920FFECC800BD7268 /* VirtualFaceContent.swift */; };
+		A721FDFB20FFEF9B00BD7268 /* SHKCircleWaveRainbowBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */; };
+		A721FDFC20FFEFA000BD7268 /* SHKInfrared.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */; };
+		A721FDFD20FFEFA600BD7268 /* SHKWater.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01C20FC4156009B522F /* SHKWater.fsh */; };
+		A721FDFE20FFEFA600BD7268 /* SHKStaticGrayNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01D20FC4156009B522F /* SHKStaticGrayNoise.fsh */; };
+		A721FDFF20FFEFA600BD7268 /* SHKCircleWave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01E20FC4156009B522F /* SHKCircleWave.fsh */; };
+		A721FE0020FFEFA600BD7268 /* SHKColorInvert.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD01F20FC4156009B522F /* SHKColorInvert.fsh */; };
+		A721FE0120FFEFA600BD7268 /* SHKEmbossColor.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02020FC4156009B522F /* SHKEmbossColor.fsh */; };
+		A721FE0220FFEFA600BD7268 /* SHKRadialGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02120FC4156009B522F /* SHKRadialGradient.fsh */; };
+		A721FE0320FFEFA600BD7268 /* SHKLightGrid.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02220FC4156009B522F /* SHKLightGrid.fsh */; };
+		A721FE0420FFEFA600BD7268 /* SHKLinearGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02320FC4156009B522F /* SHKLinearGradient.fsh */; };
+		A721FE0520FFEFA600BD7268 /* SHKColorAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02420FC4156009B522F /* SHKColorAlpha.fsh */; };
+		A721FE0620FFEFA600BD7268 /* SHKCircleWaveBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02520FC4156009B522F /* SHKCircleWaveBlended.fsh */; };
+		A721FE0720FFEFA600BD7268 /* SHKEmbossGray.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02620FC4156009B522F /* SHKEmbossGray.fsh */; };
+		A721FE0820FFEFA600BD7268 /* SHKInterlace.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02720FC4156009B522F /* SHKInterlace.fsh */; };
+		A721FE0920FFEFA600BD7268 /* SHKPixelate.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02820FC4156009B522F /* SHKPixelate.fsh */; };
+		A721FE0A20FFEFA600BD7268 /* SHKStaticRainbowNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02920FC4156009B522F /* SHKStaticRainbowNoise.fsh */; };
+		A721FE0B20FFEFA600BD7268 /* SHKColorize.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02A20FC4156009B522F /* SHKColorize.fsh */; };
+		A721FE0C20FFEFA600BD7268 /* SHKPassthrough.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02B20FC4156009B522F /* SHKPassthrough.fsh */; };
+		A721FE0D20FFEFA600BD7268 /* SHKDynamicGrayNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02C20FC4156009B522F /* SHKDynamicGrayNoise.fsh */; };
+		A721FE0E20FFEFA600BD7268 /* SHKCircleWaveRainbow.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02D20FC4156009B522F /* SHKCircleWaveRainbow.fsh */; };
+		A721FE0F20FFEFA600BD7268 /* SHKScreen.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02E20FC4156009B522F /* SHKScreen.fsh */; };
+		A721FE1020FFEFA600BD7268 /* SHKDynamicRainbowNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD02F20FC4156009B522F /* SHKDynamicRainbowNoise.fsh */; };
+		A721FE1120FFEFA600BD7268 /* SHKDesaturate.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03020FC4156009B522F /* SHKDesaturate.fsh */; };
+		A721FE1220FFEFA600BD7268 /* SHKColorNonAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03120FC4156009B522F /* SHKColorNonAlpha.fsh */; };
+		A721FE1320FFEFA600BD7268 /* SHKScanlines.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03220FC4156009B522F /* SHKScanlines.fsh */; };
+		A721FE1420FFEFA600BD7268 /* SHKCheckerboard.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03320FC4156009B522F /* SHKCheckerboard.fsh */; };
 		A74F59B820FF65DF00C263FC /* DoWhatYouLoveSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */; };
 		A74F59BB20FF713300C263FC /* UserDefaults+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F59BA20FF713300C263FC /* UserDefaults+Application.swift */; };
+		A74F59BF20FF936100C263FC /* StickerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F59BD20FF936100C263FC /* StickerDetailViewController.swift */; };
+		A74F59C020FF936100C263FC /* StickerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74F59BE20FF936100C263FC /* StickerDetailViewController.xib */; };
+		A793C87120FFB1E900B00168 /* StickerLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793C86F20FFB1E900B00168 /* StickerLocationViewController.swift */; };
+		A793C87220FFB1E900B00168 /* StickerLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A793C87020FFB1E900B00168 /* StickerLocationViewController.xib */; };
+		A793C87420FFB99000B00168 /* chicagoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A793C87320FFB99000B00168 /* chicagoTexture.png */; };
+		A793C87620FFCA1200B00168 /* ChicagoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */; };
+		A79ACAE420FF9C6B00793967 /* newYorkTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A79ACAE320FF9C6B00793967 /* newYorkTexture.png */; };
+		A79ACAE620FF9C7600793967 /* sanFranciscoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */; };
 		CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */; };
 		CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */; };
 		CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03820FD6CE9009B522F /* nautical.wav */; };
@@ -34,8 +73,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A721FDF120FFEA3600BD7268 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
+		A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitualContentUpdater.swift; sourceTree = "<group>"; };
+		A721FDF520FFEB4500BD7268 /* VirualContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirualContentType.swift; sourceTree = "<group>"; };
+		A721FDF720FFEC4C00BD7268 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		A721FDF920FFECC800BD7268 /* VirtualFaceContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualFaceContent.swift; sourceTree = "<group>"; };
 		A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoWhatYouLoveSceneController.swift; sourceTree = "<group>"; };
 		A74F59BA20FF713300C263FC /* UserDefaults+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Application.swift"; sourceTree = "<group>"; };
+		A74F59BC20FF8AEF00C263FC /* WeWork-Stickers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WeWork-Stickers.entitlements"; sourceTree = "<group>"; };
+		A74F59BD20FF936100C263FC /* StickerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerDetailViewController.swift; sourceTree = "<group>"; };
+		A74F59BE20FF936100C263FC /* StickerDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerDetailViewController.xib; sourceTree = "<group>"; };
+		A793C86F20FFB1E900B00168 /* StickerLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerLocationViewController.swift; sourceTree = "<group>"; };
+		A793C87020FFB1E900B00168 /* StickerLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerLocationViewController.xib; sourceTree = "<group>"; };
+		A793C87320FFB99000B00168 /* chicagoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicagoTexture.png; sourceTree = "<group>"; };
+		A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicagoSceneController.swift; sourceTree = "<group>"; };
+		A79ACAE320FF9C6B00793967 /* newYorkTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYorkTexture.png; sourceTree = "<group>"; };
+		A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanFranciscoTexture.png; sourceTree = "<group>"; };
 		CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
 		CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
 		CD4BD01C20FC4156009B522F /* SHKWater.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
@@ -138,7 +191,8 @@
 				CD4BD03220FC4156009B522F /* SHKScanlines.fsh */,
 				CD4BD03320FC4156009B522F /* SHKCheckerboard.fsh */,
 			);
-			path = Shaders;
+			name = Shaders;
+			path = Shaders/Shaders;
 			sourceTree = "<group>";
 		};
 		CD7247F820FEF71A001632D4 /* Model */ = {
@@ -155,7 +209,11 @@
 			children = (
 				CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */,
 				CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */,
+				A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */,
 				A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */,
+				A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */,
+				A721FDF520FFEB4500BD7268 /* VirualContentType.swift */,
+				A721FDF920FFECC800BD7268 /* VirtualFaceContent.swift */,
 			);
 			path = "Scene Controllers";
 			sourceTree = "<group>";
@@ -166,6 +224,12 @@
 				CD7247F620FEF60F001632D4 /* StickersViewController.swift */,
 				A74F59B920FF681B00C263FC /* StickerCollectionViewCells */,
 				CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */,
+				A74F59BD20FF936100C263FC /* StickerDetailViewController.swift */,
+				A74F59BE20FF936100C263FC /* StickerDetailViewController.xib */,
+				A793C86F20FFB1E900B00168 /* StickerLocationViewController.swift */,
+				A793C87020FFB1E900B00168 /* StickerLocationViewController.xib */,
+				A721FDF120FFEA3600BD7268 /* SelfieViewController.swift */,
+				A721FDF720FFEC4C00BD7268 /* StatusViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -182,15 +246,6 @@
 				CD7247ED20FE1840001632D4 /* star.png */,
 			);
 			path = "Scene Kit Resources";
-			sourceTree = "<group>";
-		};
-		CD7247FC20FEF766001632D4 /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */,
-				CD4BD01920FC4156009B522F /* Shaders */,
-			);
-			path = Shaders;
 			sourceTree = "<group>";
 		};
 		CDF932FF20FAB5DB005EC774 = {
@@ -212,16 +267,21 @@
 		CDF9330A20FAB5DB005EC774 /* WeWork-Stickers */ = {
 			isa = PBXGroup;
 			children = (
+				A74F59BC20FF8AEF00C263FC /* WeWork-Stickers.entitlements */,
 				CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */,
 				CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */,
 				A74F59BA20FF713300C263FC /* UserDefaults+Application.swift */,
 				CDF9331420FAB5DD005EC774 /* Assets.xcassets */,
+				A79ACAE320FF9C6B00793967 /* newYorkTexture.png */,
+				A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */,
+				A793C87320FFB99000B00168 /* chicagoTexture.png */,
 				CDF9330D20FAB5DB005EC774 /* art.scnassets */,
 				CDF9331120FAB5DB005EC774 /* Main.storyboard */,
 				CD7247FA20FEF731001632D4 /* View Controllers */,
 				CD7247F920FEF723001632D4 /* Scene Controllers */,
 				CD7247F820FEF71A001632D4 /* Model */,
-				CD7247FC20FEF766001632D4 /* Shaders */,
+				CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */,
+				CD4BD01920FC4156009B522F /* Shaders */,
 				CD7247FB20FEF74F001632D4 /* Scene Kit Resources */,
 				CDF9331620FAB5DD005EC774 /* LaunchScreen.storyboard */,
 				CDF9331920FAB5DD005EC774 /* Info.plist */,
@@ -261,6 +321,11 @@
 				TargetAttributes = {
 					CDF9330720FAB5DB005EC774 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -287,19 +352,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A79ACAE420FF9C6B00793967 /* newYorkTexture.png in Resources */,
+				A721FE0B20FFEFA600BD7268 /* SHKColorize.fsh in Resources */,
 				CD7247F320FEE0B8001632D4 /* Stickers.plist in Resources */,
+				A793C87220FFB1E900B00168 /* StickerLocationViewController.xib in Resources */,
+				A721FE0320FFEFA600BD7268 /* SHKLightGrid.fsh in Resources */,
+				A721FE0520FFEFA600BD7268 /* SHKColorAlpha.fsh in Resources */,
 				CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */,
+				A721FE0C20FFEFA600BD7268 /* SHKPassthrough.fsh in Resources */,
 				CD6A741120FD6F1F00C50ECC /* Sparkler.scnp in Resources */,
+				A74F59C020FF936100C263FC /* StickerDetailViewController.xib in Resources */,
+				A721FE0A20FFEFA600BD7268 /* SHKStaticRainbowNoise.fsh in Resources */,
+				A721FE0620FFEFA600BD7268 /* SHKCircleWaveBlended.fsh in Resources */,
+				A721FE1020FFEFA600BD7268 /* SHKDynamicRainbowNoise.fsh in Resources */,
+				A721FE0D20FFEFA600BD7268 /* SHKDynamicGrayNoise.fsh in Resources */,
+				A721FE0720FFEFA600BD7268 /* SHKEmbossGray.fsh in Resources */,
+				A721FE0E20FFEFA600BD7268 /* SHKCircleWaveRainbow.fsh in Resources */,
+				A721FE1120FFEFA600BD7268 /* SHKDesaturate.fsh in Resources */,
+				A79ACAE620FF9C7600793967 /* sanFranciscoTexture.png in Resources */,
+				A721FE1320FFEFA600BD7268 /* SHKScanlines.fsh in Resources */,
+				A721FE0220FFEFA600BD7268 /* SHKRadialGradient.fsh in Resources */,
+				A721FDFC20FFEFA000BD7268 /* SHKInfrared.fsh in Resources */,
+				A721FE0120FFEFA600BD7268 /* SHKEmbossColor.fsh in Resources */,
 				CD72480220FEFB96001632D4 /* StickerCollectionViewCell.xib in Resources */,
 				CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */,
+				A721FE0F20FFEFA600BD7268 /* SHKScreen.fsh in Resources */,
+				A721FDFE20FFEFA600BD7268 /* SHKStaticGrayNoise.fsh in Resources */,
 				CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */,
 				CD70439420FC274600A2128C /* smoke.png in Resources */,
 				CDF9331520FAB5DD005EC774 /* Assets.xcassets in Resources */,
+				A721FE1420FFEFA600BD7268 /* SHKCheckerboard.fsh in Resources */,
+				A721FE0020FFEFA600BD7268 /* SHKColorInvert.fsh in Resources */,
+				A721FE0920FFEFA600BD7268 /* SHKPixelate.fsh in Resources */,
+				A721FDFD20FFEFA600BD7268 /* SHKWater.fsh in Resources */,
+				A721FE1220FFEFA600BD7268 /* SHKColorNonAlpha.fsh in Resources */,
+				A793C87420FFB99000B00168 /* chicagoTexture.png in Resources */,
+				A721FDFF20FFEFA600BD7268 /* SHKCircleWave.fsh in Resources */,
 				CD7247EE20FE1840001632D4 /* Lights.scnp in Resources */,
+				A721FDFB20FFEF9B00BD7268 /* SHKCircleWaveRainbowBlended.fsh in Resources */,
 				CD6A741020FD6F1F00C50ECC /* spark.png in Resources */,
 				CD70439520FC274600A2128C /* Fog.scnp in Resources */,
+				A721FE0820FFEFA600BD7268 /* SHKInterlace.fsh in Resources */,
 				CD7247EF20FE1840001632D4 /* star.png in Resources */,
 				CDF9331320FAB5DB005EC774 /* Main.storyboard in Resources */,
+				A721FE0420FFEFA600BD7268 /* SHKLinearGradient.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,15 +407,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */,
+				A721FDF620FFEB4500BD7268 /* VirualContentType.swift in Sources */,
 				CD7247FE20FEF9CF001632D4 /* UIColor+Application.swift in Sources */,
 				CD7247F520FEEEA1001632D4 /* StickerStack.swift in Sources */,
+				A721FDF220FFEA3600BD7268 /* SelfieViewController.swift in Sources */,
 				CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */,
 				CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */,
+				A721FDFA20FFECC800BD7268 /* VirtualFaceContent.swift in Sources */,
+				A793C87120FFB1E900B00168 /* StickerLocationViewController.swift in Sources */,
 				A74F59B820FF65DF00C263FC /* DoWhatYouLoveSceneController.swift in Sources */,
 				CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */,
 				A74F59BB20FF713300C263FC /* UserDefaults+Application.swift in Sources */,
+				A721FDF420FFEB1500BD7268 /* VitualContentUpdater.swift in Sources */,
 				CD7247F720FEF60F001632D4 /* StickersViewController.swift in Sources */,
+				A74F59BF20FF936100C263FC /* StickerDetailViewController.swift in Sources */,
+				A793C87620FFCA1200B00168 /* ChicagoSceneController.swift in Sources */,
 				CD7247F120FEB3E2001632D4 /* NewYorkSceneController.swift in Sources */,
+				A721FDF820FFEC4C00BD7268 /* StatusViewController.swift in Sources */,
 				CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = "WeWork-Stickers/Info.plist";
@@ -484,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = "WeWork-Stickers/Info.plist";

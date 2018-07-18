@@ -26,23 +26,25 @@ final class SanFranciscoSceneController: NSObject, SceneController {
     }
     
     func prepare(node: SCNNode) {
-        let bridge = node.childNode(withName: "bridge", recursively: true)
+        let root = node.childNode(withName: "plane", recursively: true)
+        let bridge = root?.childNode(withName: "bridge", recursively: true)
         bridge?.scale = SCNVector3(0.0075, 0.0075, 0.0075)
     }
     
     func animateOn(node: SCNNode) {
         guard
-            let light = node.childNode(withName: "light", recursively: true),
-            let light2 = node.childNode(withName: "light2", recursively: true),
-            let fog = node.childNode(withName: "fog", recursively: true),
-            let fog2 = node.childNode(withName: "fog2", recursively: true),
-            let bridge = node.childNode(withName: "bridge", recursively: true),
-            let weWorkText = node.childNode(withName: "weWorkText", recursively: true)
+            let root = node.childNode(withName: "plane", recursively: true),
+            let light = root.childNode(withName: "light", recursively: true),
+            let light2 = root.childNode(withName: "light2", recursively: true),
+            let fog = root.childNode(withName: "fog", recursively: true),
+            let fog2 = root.childNode(withName: "fog2", recursively: true),
+            let bridge = root.childNode(withName: "bridge", recursively: true),
+            let weWorkText = root.childNode(withName: "weWorkText", recursively: true)
             else { return }
         light.scale = SCNVector3Zero
         light2.scale = SCNVector3Zero
         SCNTransaction.begin()
-        SCNTransaction.animationDuration = 1.0
+        SCNTransaction.animationDuration = 0.2
         for node in bridge.childNodes {
             node.scale = SCNVector3(1.05, 1.0, 1.0)
         }
@@ -67,7 +69,8 @@ final class SanFranciscoSceneController: NSObject, SceneController {
     }
     
     func animateLights(node: SCNNode) {
-        guard let light = node.childNode(withName: "light", recursively: true) else { return }
+        let root = node.childNode(withName: "plane", recursively: true)
+        guard let light = root?.childNode(withName: "light", recursively: true) else { return }
         let material = light.geometry!.firstMaterial!
         
         // highlight it
@@ -92,8 +95,9 @@ final class SanFranciscoSceneController: NSObject, SceneController {
     }
     
     func animateText(node: SCNNode) {
+        let root = node.childNode(withName: "plane", recursively: true)
         guard
-            let weWorkText = node.childNode(withName: "weWorkText", recursively: true),
+            let weWorkText = root?.childNode(withName: "weWorkText", recursively: true),
             let w = weWorkText.childNode(withName: "W", recursively: true),
             let e = weWorkText.childNode(withName: "E", recursively: true),
             let w2 = weWorkText.childNode(withName: "W2", recursively: true),

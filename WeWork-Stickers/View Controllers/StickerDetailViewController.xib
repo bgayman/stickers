@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickerDetailViewController" customModule="WeWork_Stickers" customModuleProvider="target">
+            <connections>
+                <outlet property="captionLabel" destination="I4x-Fv-GPw" id="x7V-Ni-RWf"/>
+                <outlet property="descriptionLabel" destination="dgY-8U-6fd" id="UC3-ic-JNy"/>
+                <outlet property="infoStackView" destination="4cF-Qp-g4n" id="d20-PD-Zsl"/>
+                <outlet property="moreButton" destination="AWx-hv-hmw" id="EaS-5p-jgX"/>
+                <outlet property="sceneView" destination="XI5-OZ-ssf" id="9Y5-vw-mfp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-OZ-ssf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </sceneKitView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4cF-Qp-g4n">
+                    <rect key="frame" x="20" y="572" width="335" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-8U-6fd">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-hv-hmw">
+                            <rect key="frame" x="0.0" y="22.5" width="335" height="30"/>
+                            <state key="normal" title="More"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4x-Fv-GPw">
+                            <rect key="frame" x="0.0" y="54.5" width="335" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4cF-Qp-g4n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3XP-XH-GJh"/>
+                <constraint firstAttribute="trailing" secondItem="XI5-OZ-ssf" secondAttribute="trailing" id="MZd-Dy-Nfg"/>
+                <constraint firstItem="XI5-OZ-ssf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Sjt-tl-dFb"/>
+                <constraint firstItem="XI5-OZ-ssf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jGy-AG-pAh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4cF-Qp-g4n" secondAttribute="bottom" constant="20" id="jKV-Z5-bKb"/>
+                <constraint firstAttribute="bottom" secondItem="XI5-OZ-ssf" secondAttribute="bottom" id="tzd-gy-6Ob"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4cF-Qp-g4n" secondAttribute="trailing" constant="20" id="xJC-Qe-Wgf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

@@ -11,13 +11,25 @@ import UIKit
 // MARK: - StickersViewController -
 final class StickersViewController: UIViewController {
 
-    // MARK: - Properties -
+    // MARK: - Outlets -
     @IBOutlet weak var collectionView: UICollectionView!
+
+    // MARK: - Properties -
+    private lazy var longPressGesture: UILongPressGestureRecognizer = {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
+        longPressGesture.minimumPressDuration = 1.0
+        return longPressGesture
+    }()
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,11 +49,36 @@ final class StickersViewController: UIViewController {
         tabBarController?.tabBar.tintColor = UIColor.appRed
 
         navigationItem.largeTitleDisplayMode = .always
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         title = "Stickers"
         
         let nib = UINib(nibName: "\(StickerCollectionViewCell.self)", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "\(StickerCollectionViewCell.self)")
+        collectionView.addGestureRecognizer(longPressGesture)
+    }
+
+    private func showDeleteAlert(from view: UIView, for indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Remove", message: "Remove this sticker?", preferredStyle: .actionSheet)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        let delete = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+            UserDefaults.appGroup?.remove(StickerStack.shared.stickers[indexPath.item])
+            self.collectionView.reloadItems(at: [indexPath])
+        }
+        alertController.addAction(cancel)
+        alertController.addAction(delete)
+        alertController.popoverPresentationController?.sourceView = view
+        alertController.view.tintColor = UIColor.appRed
+        present(alertController, animated: true)
+    }
+
+    // MARK: - Actions -
+    @objc
+    private func didLongPress(_ sender: UILongPressGestureRecognizer) {
+        let location = sender.location(in: collectionView)
+        guard let indexPath = collectionView.indexPathForItem(at: location),
+            UserDefaults.appGroup?.date(for: StickerStack.shared.stickers[indexPath.item]) != nil
+        else { return }
+        showDeleteAlert(from: collectionView.cellForItem(at: indexPath) ?? view, for: indexPath)
     }
 
 }
@@ -58,6 +95,14 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
         sticker.dateAdded = UserDefaults.appGroup?.date(for: sticker)
         cell.sticker = sticker
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sticker = StickerStack.shared.stickers[indexPath.item]
+        guard UserDefaults.appGroup?.date(for: sticker) != nil else { return }
+        let stickerDetailVC = StickerDetailViewController(sticker: sticker)
+        stickerDetailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(stickerDetailVC, animated: true)
     }
     
     var height: CGFloat {
@@ -77,17 +122,10 @@ extension StickersViewController: StickerScannerViewControllerDelegate {
             guard let strongSelf = self else {
                 return
             }
-            let cells = strongSelf.collectionView.visibleCells.compactMap { $0 as? StickerCollectionViewCell }.filter {
-                guard let sticker = $0.sticker else { return false }
-                return addedStickers.contains(sticker)
-            }
-            cells.forEach { $0.stickerImageView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6) }
-            UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
-                cells.forEach {
-                    $0.stickerImageView.image = $0.sticker?.stickerImage
-                    $0.transform = .identity
-                }
-            })
+            let indexPaths = addedStickers
+            .compactMap { StickerStack.shared.stickers.index(of: $0) }
+            .map { IndexPath(item: $0, section: 0) }
+            strongSelf.collectionView.reloadItems(at: indexPaths)
         }
     }
 }

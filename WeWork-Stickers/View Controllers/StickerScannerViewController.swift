@@ -26,7 +26,14 @@ final class StickerScannerViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var closeButtonVisualEffectView: UIVisualEffectView!
-
+    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var refreshVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var infoVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var infoStackView: UIStackView!
+    @IBOutlet weak var infoImageView: UIImageView!
+    @IBOutlet weak var infoTitleLabel: UILabel!
+    @IBOutlet weak var infoDescriptionLabel: UILabel!
+    
     // MARK: - Properties -
     weak var delegate: StickerScannerViewControllerDelegate?
     private var addedStickers = [Sticker]()
@@ -34,6 +41,7 @@ final class StickerScannerViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         
         sceneView.delegate = self
         
@@ -71,12 +79,85 @@ final class StickerScannerViewController: UIViewController {
         closeButton.tintColor = UIColor.appRed
         closeButton.addTarget(self, action: #selector(didPressClose(_:)), for: .touchUpInside)
         closeButtonVisualEffectView.layer.cornerRadius = closeButtonVisualEffectView.bounds.height * 0.5
+        closeButtonVisualEffectView.layer.masksToBounds = true
+
+        refreshButton.tintColor = UIColor.appRed
+        refreshButton.addTarget(self, action: #selector(didPressRefresh(_:)), for: .touchUpInside)
+        refreshVisualEffectView.layer.cornerRadius = refreshVisualEffectView.bounds.height * 0.5
+        refreshVisualEffectView.layer.masksToBounds = true
+
+        infoVisualEffectView.layer.cornerRadius = 20.0
+        infoVisualEffectView.layer.masksToBounds = true
+
+        infoImageView.isHidden = true
+        infoTitleLabel.isHidden = true
+
+        infoTitleLabel.font = UIFont.appFont(textStyle: .title3, weight: .heavy)
+        infoTitleLabel.textColor = UIColor.black.withAlphaComponent(0.8)
+        infoDescriptionLabel.font = UIFont.appFont(textStyle: .body, weight: .medium)
+        infoDescriptionLabel.textAlignment = .center
+        infoDescriptionLabel.text = "Scan sticker to add."
+        infoDescriptionLabel.textColor = UIColor.gray.withAlphaComponent(0.8)
+
+        perform(#selector(dismissInfo(completion:)), with: nil, afterDelay: 2.0)
+    }
+
+    @objc
+    private func dismissInfo(completion: (() -> Void)?) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(dismissInfo), object: nil)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.infoVisualEffectView.contentView.alpha = 0.0
+            self.infoVisualEffectView.effect = nil
+        }) { (_) in
+            completion?()
+        }
+    }
+
+    private func showInfo(with sticker: Sticker) {
+        if infoVisualEffectView.effect != nil {
+            dismissInfo {
+                self.showInfo(with: sticker)
+            }
+        } else {
+            populatInfo(with: sticker)
+            UIView.animate(withDuration: 0.5) {
+                self.infoVisualEffectView.contentView.alpha = 1.0
+                let visualEffect = UIBlurEffect(style: .light)
+                self.infoVisualEffectView.effect = visualEffect
+            }
+            perform(#selector(dismissInfo(completion:)), with: nil, afterDelay: 3.0)
+        }
+    }
+
+    private func populatInfo(with sticker: Sticker) {
+        infoImageView.isHidden = false
+        infoImageView.image = sticker.stickerImage
+        infoTitleLabel.isHidden = false
+        infoTitleLabel.text = sticker.title
+        infoTitleLabel.textAlignment = .natural
+        infoDescriptionLabel.text = sticker.description
+        infoDescriptionLabel.textAlignment = .natural
     }
 
     // MARK: - Actions -
     @objc
     private func didPressClose(_ sender: UIButton) {
         delegate?.stickerScannerViewController(self, didPressCloseWith: addedStickers)
+    }
+
+    @objc
+    private func didPressRefresh(_ sender: UIButton) {
+        let configuration = ARImageTrackingConfiguration()
+
+        guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: ARImageGroupName.stickers, bundle: Bundle.main) else {
+            fatalError("No refrence images in bundle")
+        }
+
+        configuration.trackingImages = trackingImages
+        configuration.maximumNumberOfTrackedImages = 1
+
+        // Run the view's session
+        sceneView.session.run(configuration, options: [ARSession.RunOptions.removeExistingAnchors])
     }
 }
 
@@ -90,9 +171,16 @@ extension StickerScannerViewController: ARSCNViewDelegate {
         guard let sticker = StickerStack.shared.stickers.first(where: { $0.identifier == anchor.name}) else {
             return SCNNode()
         }
+        if UserDefaults.appGroup?.date(for: sticker) == nil {
+            UserDefaults.appGroup?.add(sticker)
+            addedStickers.append(sticker)
+        }
         let sceneController = sticker.sceneController
         let scene = sceneController.makeScene()
         sceneController.prepare(node: scene.rootNode)
+        DispatchQueue.main.async {
+            self.showInfo(with: sticker)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             sceneController.animateOn(node: scene.rootNode)
         }
