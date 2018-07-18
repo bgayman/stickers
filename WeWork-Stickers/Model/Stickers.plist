@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>identifier</key>
+		<string>chicago</string>
+		<key>title</key>
+		<string>Chicago</string>
+		<key>description</key>
+		<string>Chicago, officially the City of Chicago, is the third most populous city in the United States, after New York City and Los Angeles. With over 2.7 million residents, it is also the most populous city in both the state of Illinois and the Midwestern United States. It is the county seat of Cook County. The Chicago metropolitan area, often referred to as Chicagoland, has nearly 10 million people and is the third-largest in the United States. It is the birthplace of the skyscraper and perhaps the most influential architectural city of the 20th century. Chicago saw the creation of the first standardized futures contracts at the Chicago Board of Trade; today its successor has evolved into the largest and most diverse derivatives market in the world, generating 20% of all volume in commodities and financial futures.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>41.836944</real>
+			<key>longitude</key>
+			<real>-87.68472199999999</real>
+		</dict>
+		<key>imageName</key>
+		<string>chicagoSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Chicago</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>frankfurt</string>
+		<key>title</key>
+		<string>Frankfurt</string>
+		<key>description</key>
+		<string>Frankfurt, officially the City of Frankfurt am Main, is a metropolis and the largest city in the German state of Hesse and the fifth-largest city in Germany. Frankfurt was a city state, the Free City of Frankfurt, for nearly five centuries, and was one of the most important cities of the Holy Roman Empire; it lost its sovereignty in 1866.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>50.116667</real>
+			<key>longitude</key>
+			<real>8.683332999999999</real>
+		</dict>
+		<key>imageName</key>
+		<string>frankfurtSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Frankfurt</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>monterrey</string>
+		<key>title</key>
+		<string>Monterrey</string>
+		<key>description</key>
+		<string>Monterrey is the capital and largest city of the northeastern state of Nuevo León, Mexico. The city is anchor to the third-largest metropolitan area in Mexico and is the country&apos;s ninth-largest city. Monterrey serves as a commercial center of northern Mexico and is the base of many significant international corporations.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>25.666667</real>
+			<key>longitude</key>
+			<real>-100.3</real>
+		</dict>
+		<key>imageName</key>
+		<string>monterreySticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Monterrey</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>montreal</string>
+		<key>title</key>
+		<string>Montréal</string>
+		<key>description</key>
+		<string>Montreal is the most populous municipality in the Canadian province of Quebec and the second-most populous municipality in Canada. Originally called Ville-Marie, or &quot;City of Mary&quot;, it is named after Mount Royal, the triple-peaked hill in the heart of the city. The city is centred on the Island of Montreal, which took its name from the same source as the city, and a few much smaller peripheral islands, the largest of which is Île Bizard. It has a distinct four-season continental climate with warm to hot summers and cold, snowy winters.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>45.5</real>
+			<key>longitude</key>
+			<real>-73.566667</real>
+		</dict>
+		<key>imageName</key>
+		<string>montrealSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Montreal</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>newYork</string>
+		<key>title</key>
+		<string>New York</string>
+		<key>description</key>
+		<string>The City of New York, often called New York City (NYC) or simply New York, is the most populous city in the United States. With an estimated 2017 population of 8,622,698 distributed over a land area of about 302.6 square miles (784 km2), New York City is also the most densely populated major city in the United States. Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, the largest metropolitan area in the world by urban landmass and one of the world&apos;s most populous megacities, with an estimated 20,320,876 people in its 2017 Metropolitan Statistical Area and 23,876,155 residents in its Combined Statistical Area. A global power city, New York City has been described as the cultural, financial, and media capital of the world, and exerts a significant impact upon commerce, entertainment, research, technology, education, politics, tourism, and sports. The city&apos;s fast pace defines the term New York minute. Home to the headquarters of the United Nations, New York is an important center for international diplomacy.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>40.7127</real>
+			<key>longitude</key>
+			<real>-74.0059</real>
+		</dict>
+		<key>imageName</key>
+		<string>newYorkSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/New_York_City</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>paris</string>
+		<key>title</key>
+		<string>Paris</string>
+		<key>description</key>
+		<string>Paris is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and a population of 2,206,488. Since the 17th century, Paris has been one of Europe&apos;s major centres of finance, commerce, fashion, science, music, and painting. The Paris Region had a GDP of €681 billion (US$850 billion) in 2016, accounting for 31 per cent of the GDP of France. In 2013–2014, the Paris Region had the third-highest GDP in the world and the largest regional GDP in the EU. According to the Economist Intelligence Unit Worldwide Cost of Living Survey in 2018, Paris was the second-most expensive city in the world, behind Singapore and ahead of Zurich, Hong Kong, Oslo and Geneva.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>48.8567</real>
+			<key>longitude</key>
+			<real>2.3508</real>
+		</dict>
+		<key>imageName</key>
+		<string>parisSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Paris</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>pride</string>
+		<key>title</key>
+		<string>Pride</string>
+		<key>description</key>
+		<string>Gay pride or LGBT pride is the positive stance against discrimination and violence toward lesbian, gay, bisexual, and transgender (LGBT) people to promote their self-affirmation, dignity, equality rights, increase their visibility as a social group, build community, and celebrate sexual diversity and gender variance. Pride, as opposed to shame and social stigma, is the predominant outlook that bolsters most LGBT rights movements throughout the world. Pride has lent its name to LGBT-themed organizations, institutes, foundations, book titles, periodicals and even a cable TV station and the Pride Library.</string>
+		<key>imageName</key>
+		<string>prideSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Gay_pride</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>pride2</string>
+		<key>title</key>
+		<string>Pride Heart</string>
+		<key>description</key>
+		<string>The rainbow flag, commonly known as the gay pride flag or LGBT pride flag, is a symbol of lesbian, gay, bisexual and transgender (LGBT) pride and LGBT social movements. Other older uses of rainbow flags include a symbol of peace. The colors reflect the diversity of the LGBT community, as the flag is often used as a symbol of gay pride during LGBT rights marches. While this use of the rainbow flag originated in Northern California’s San Francisco Bay Area, the flag is now used worldwide.</string>
+		<key>imageName</key>
+		<string>prideHeartSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Rainbow_flag_(LGBT_movement)</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>sanFrancisco</string>
+		<key>title</key>
+		<string>San Francisco</string>
+		<key>description</key>
+		<string>San Francisco, officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California. It covers an area of about 46.89 square miles (121.4 km2), mostly at the north end of the San Francisco Peninsula in the San Francisco Bay Area. San Francisco is the fourth-most populous city in California and the 13th-most populous in the United States, with a 2017 census-estimated population of 884,363. The consolidated city-county is also the fifth most densely populated U.S. county, behind only four of the five New York City boroughs. As of 2016, it was the 7th highest-income county in the United States, with a per capita personal income of $110,418.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>37.783333</real>
+			<key>longitude</key>
+			<real>-122.416667</real>
+		</dict>
+		<key>imageName</key>
+		<string>sanFranciscoSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/San_Francisco</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>saoPaulo</string>
+		<key>title</key>
+		<string>São Paulo</string>
+		<key>description</key>
+		<string>São Paulo is a municipality in the southeast region of Brazil. The metropolis is an alpha global city (as listed by the GaWC) and the most populous city in Brazil, the Western Hemisphere and the Southern Hemisphere, besides being the largest Portuguese-speaking city in the world. The municipality is also the Earth&apos;s 11th largest city proper by population. The city is the capital of the surrounding state of São Paulo, one of the most populous and wealthiest states in Brazil. It exerts strong international influences in commerce, finance, arts and entertainment. The name of the city honors the Apostle, Saint Paul of Tarsus. The city&apos;s metropolitan area, the Greater São Paulo, ranks as the most populous in Brazil, the 12th most populous on Earth. The process of conurbation between the metropolitan areas located around the Greater São Paulo (Campinas, Santos, Sorocaba and the Paraíba Valley) created the São Paulo Macrometropolis, a megalopolis with more than 30 million inhabitants, one of the most populous urban agglomerations in the world.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>-23.55</real>
+			<key>longitude</key>
+			<real>-46.633333</real>
+		</dict>
+		<key>imageName</key>
+		<string>saoPauloSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/São_Paulo</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>telAviv</string>
+		<key>title</key>
+		<string>Tel Aviv</string>
+		<key>description</key>
+		<string>Tel Aviv is the second most populous city in Israel – after Jerusalem – and the most populous city in the conurbation of Gush Dan, Israel&apos;s largest metropolitan area. Located on the country&apos;s Mediterranean coastline and with a population of 438,818, it is the financial and technological center of the country. Silicon Wadi is another name for Gush Dan, in comparison to Silicon Valley in the U.S. state of California.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>32.066667</real>
+			<key>longitude</key>
+			<real>34.783333</real>
+		</dict>
+		<key>imageName</key>
+		<string>telAvivSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/Tel_Aviv</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>weWork</string>
+		<key>title</key>
+		<string>We Badge</string>
+		<key>description</key>
+		<string>WeWork is an American company that provides shared workspaces, technology startup subculture communities, and services for entrepreneurs, freelancers, startups, small businesses and large enterprises. Founded in 2010, it is headquartered in New York City. WeWork has a current valuation of roughly US$20 billion and manages 10 million square feet of office space.</string>
+		<key>location</key>
+		<dict>
+			<key>latitude</key>
+			<real>40.740368</real>
+			<key>longitude</key>
+			<real>-73.99564700000001</real>
+		</dict>
+		<key>imageName</key>
+		<string>weWorkSticker</string>
+		<key>wikiLink</key>
+		<string>https://en.wikipedia.org/wiki/WeWork</string>
+	</dict>
+</array>
+</plist>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */; };
-		CD4BD03720FD6B2B009B522F /* SanFranciscoSceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03620FD6B2B009B522F /* SanFranciscoSceneManager.swift */; };
+		CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */; };
 		CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03820FD6CE9009B522F /* nautical.wav */; };
 		CD6A741020FD6F1F00C50ECC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6A740E20FD6F1F00C50ECC /* spark.png */; };
 		CD6A741120FD6F1F00C50ECC /* Sparkler.scnp in Resources */ = {isa = PBXBuildFile; fileRef = CD6A740F20FD6F1F00C50ECC /* Sparkler.scnp */; };
@@ -16,9 +16,16 @@
 		CD70439520FC274600A2128C /* Fog.scnp in Resources */ = {isa = PBXBuildFile; fileRef = CD70439320FC274600A2128C /* Fog.scnp */; };
 		CD7247EE20FE1840001632D4 /* Lights.scnp in Resources */ = {isa = PBXBuildFile; fileRef = CD7247EC20FE1840001632D4 /* Lights.scnp */; };
 		CD7247EF20FE1840001632D4 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7247ED20FE1840001632D4 /* star.png */; };
+		CD7247F120FEB3E2001632D4 /* NewYorkSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */; };
+		CD7247F320FEE0B8001632D4 /* Stickers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD7247F220FEE0B8001632D4 /* Stickers.plist */; };
+		CD7247F520FEEEA1001632D4 /* StickerStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247F420FEEEA1001632D4 /* StickerStack.swift */; };
+		CD7247F720FEF60F001632D4 /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247F620FEF60F001632D4 /* StickersViewController.swift */; };
+		CD7247FE20FEF9CF001632D4 /* UIColor+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */; };
+		CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247FF20FEFB96001632D4 /* StickerCollectionViewCell.swift */; };
+		CD72480220FEFB96001632D4 /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */; };
 		CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */; };
 		CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9330D20FAB5DB005EC774 /* art.scnassets */; };
-		CDF9331020FAB5DB005EC774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330F20FAB5DB005EC774 /* ViewController.swift */; };
+		CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */; };
 		CDF9331320FAB5DB005EC774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF9331120FAB5DB005EC774 /* Main.storyboard */; };
 		CDF9331520FAB5DD005EC774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9331420FAB5DD005EC774 /* Assets.xcassets */; };
 		CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF9331620FAB5DD005EC774 /* LaunchScreen.storyboard */; };
@@ -52,7 +59,7 @@
 		CD4BD03220FC4156009B522F /* SHKScanlines.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKScanlines.fsh; sourceTree = "<group>"; };
 		CD4BD03320FC4156009B522F /* SHKCheckerboard.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCheckerboard.fsh; sourceTree = "<group>"; };
 		CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderKitExtensions.swift; sourceTree = "<group>"; };
-		CD4BD03620FD6B2B009B522F /* SanFranciscoSceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanFranciscoSceneManager.swift; sourceTree = "<group>"; };
+		CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanFranciscoSceneController.swift; sourceTree = "<group>"; };
 		CD4BD03820FD6CE9009B522F /* nautical.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nautical.wav; sourceTree = "<group>"; };
 		CD6A740E20FD6F1F00C50ECC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		CD6A740F20FD6F1F00C50ECC /* Sparkler.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Sparkler.scnp; sourceTree = "<group>"; };
@@ -60,10 +67,17 @@
 		CD70439320FC274600A2128C /* Fog.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Fog.scnp; sourceTree = "<group>"; };
 		CD7247EC20FE1840001632D4 /* Lights.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Lights.scnp; sourceTree = "<group>"; };
 		CD7247ED20FE1840001632D4 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkSceneController.swift; sourceTree = "<group>"; };
+		CD7247F220FEE0B8001632D4 /* Stickers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Stickers.plist; sourceTree = "<group>"; };
+		CD7247F420FEEEA1001632D4 /* StickerStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerStack.swift; sourceTree = "<group>"; };
+		CD7247F620FEF60F001632D4 /* StickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersViewController.swift; sourceTree = "<group>"; };
+		CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Application.swift"; sourceTree = "<group>"; };
+		CD7247FF20FEFB96001632D4 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
 		CDF9330820FAB5DB005EC774 /* WeWork-Stickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeWork-Stickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF9330D20FAB5DB005EC774 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		CDF9330F20FAB5DB005EC774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScannerViewController.swift; sourceTree = "<group>"; };
 		CDF9331220FAB5DB005EC774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDF9331420FAB5DD005EC774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF9331720FAB5DD005EC774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +128,58 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		CD7247F820FEF71A001632D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD7247F220FEE0B8001632D4 /* Stickers.plist */,
+				CD7247F420FEEEA1001632D4 /* StickerStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD7247F920FEF723001632D4 /* Scene Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */,
+				CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */,
+			);
+			path = "Scene Controllers";
+			sourceTree = "<group>";
+		};
+		CD7247FA20FEF731001632D4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD7247F620FEF60F001632D4 /* StickersViewController.swift */,
+				CD7247FF20FEFB96001632D4 /* StickerCollectionViewCell.swift */,
+				CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */,
+				CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CD7247FB20FEF74F001632D4 /* Scene Kit Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD70439220FC274600A2128C /* smoke.png */,
+				CD4BD03820FD6CE9009B522F /* nautical.wav */,
+				CD70439320FC274600A2128C /* Fog.scnp */,
+				CD6A740E20FD6F1F00C50ECC /* spark.png */,
+				CD6A740F20FD6F1F00C50ECC /* Sparkler.scnp */,
+				CD7247EC20FE1840001632D4 /* Lights.scnp */,
+				CD7247ED20FE1840001632D4 /* star.png */,
+			);
+			path = "Scene Kit Resources";
+			sourceTree = "<group>";
+		};
+		CD7247FC20FEF766001632D4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */,
+				CD4BD01920FC4156009B522F /* Shaders */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		CDF932FF20FAB5DB005EC774 = {
 			isa = PBXGroup;
 			children = (
@@ -134,20 +200,15 @@
 			isa = PBXGroup;
 			children = (
 				CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */,
-				CD70439220FC274600A2128C /* smoke.png */,
-				CD4BD03820FD6CE9009B522F /* nautical.wav */,
-				CD70439320FC274600A2128C /* Fog.scnp */,
-				CD6A740E20FD6F1F00C50ECC /* spark.png */,
-				CD6A740F20FD6F1F00C50ECC /* Sparkler.scnp */,
-				CD7247EC20FE1840001632D4 /* Lights.scnp */,
-				CD7247ED20FE1840001632D4 /* star.png */,
-				CDF9330D20FAB5DB005EC774 /* art.scnassets */,
-				CDF9330F20FAB5DB005EC774 /* ViewController.swift */,
-				CD4BD03620FD6B2B009B522F /* SanFranciscoSceneManager.swift */,
-				CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */,
-				CD4BD01920FC4156009B522F /* Shaders */,
-				CDF9331120FAB5DB005EC774 /* Main.storyboard */,
+				CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */,
 				CDF9331420FAB5DD005EC774 /* Assets.xcassets */,
+				CDF9330D20FAB5DB005EC774 /* art.scnassets */,
+				CDF9331120FAB5DB005EC774 /* Main.storyboard */,
+				CD7247FA20FEF731001632D4 /* View Controllers */,
+				CD7247F920FEF723001632D4 /* Scene Controllers */,
+				CD7247F820FEF71A001632D4 /* Model */,
+				CD7247FC20FEF766001632D4 /* Shaders */,
+				CD7247FB20FEF74F001632D4 /* Scene Kit Resources */,
 				CDF9331620FAB5DD005EC774 /* LaunchScreen.storyboard */,
 				CDF9331920FAB5DD005EC774 /* Info.plist */,
 			);
@@ -212,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7247F320FEE0B8001632D4 /* Stickers.plist in Resources */,
 				CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */,
 				CD6A741120FD6F1F00C50ECC /* Sparkler.scnp in Resources */,
+				CD72480220FEFB96001632D4 /* StickerCollectionViewCell.xib in Resources */,
 				CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */,
 				CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */,
 				CD70439420FC274600A2128C /* smoke.png in Resources */,
@@ -233,9 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4BD03720FD6B2B009B522F /* SanFranciscoSceneManager.swift in Sources */,
+				CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */,
+				CD7247FE20FEF9CF001632D4 /* UIColor+Application.swift in Sources */,
+				CD7247F520FEEEA1001632D4 /* StickerStack.swift in Sources */,
+				CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */,
 				CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */,
-				CDF9331020FAB5DB005EC774 /* ViewController.swift in Sources */,
+				CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */,
+				CD7247F720FEF60F001632D4 /* StickersViewController.swift in Sources */,
+				CD7247F120FEB3E2001632D4 /* NewYorkSceneController.swift in Sources */,
 				CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
