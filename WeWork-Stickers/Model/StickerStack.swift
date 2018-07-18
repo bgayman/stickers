@@ -84,9 +84,10 @@ struct Sticker {
              .pride,
              .pride2,
              .saoPaulo,
-             .telAviv,
-             .weWork:
+             .telAviv:
             return DoWhatYouLoveSceneController()
+        case .weWork:
+            return WeWorkSceneController()
         case .chicago:
             return ChicagoSceneController()
         case .newYork:

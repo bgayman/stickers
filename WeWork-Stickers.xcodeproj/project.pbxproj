@@ -49,6 +49,8 @@
 		A793C87620FFCA1200B00168 /* ChicagoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */; };
 		A79ACAE420FF9C6B00793967 /* newYorkTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A79ACAE320FF9C6B00793967 /* newYorkTexture.png */; };
 		A79ACAE620FF9C7600793967 /* sanFranciscoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */; };
+		A7AAF10E20FFF87A00BC36F5 /* weWorkTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AAF10D20FFF87A00BC36F5 /* weWorkTexture.png */; };
+		A7AAF11020FFFA0D00BC36F5 /* WeWorkSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */; };
 		CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */; };
 		CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */; };
 		CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03820FD6CE9009B522F /* nautical.wav */; };
@@ -93,6 +95,8 @@
 		A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicagoSceneController.swift; sourceTree = "<group>"; };
 		A79ACAE320FF9C6B00793967 /* newYorkTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYorkTexture.png; sourceTree = "<group>"; };
 		A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanFranciscoTexture.png; sourceTree = "<group>"; };
+		A7AAF10D20FFF87A00BC36F5 /* weWorkTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weWorkTexture.png; sourceTree = "<group>"; };
+		A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeWorkSceneController.swift; sourceTree = "<group>"; };
 		CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
 		CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
 		CD4BD01C20FC4156009B522F /* SHKWater.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */,
 				CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */,
 				A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */,
+				A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */,
 				A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */,
 				A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */,
 				A721FDF520FFEB4500BD7268 /* VirualContentType.swift */,
@@ -290,6 +295,7 @@
 				A79ACAE320FF9C6B00793967 /* newYorkTexture.png */,
 				A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */,
 				A793C87320FFB99000B00168 /* chicagoTexture.png */,
+				A7AAF10D20FFF87A00BC36F5 /* weWorkTexture.png */,
 				CDF9330D20FAB5DB005EC774 /* art.scnassets */,
 				CDF9331120FAB5DB005EC774 /* Main.storyboard */,
 				CD7247FA20FEF731001632D4 /* View Controllers */,
@@ -402,6 +408,7 @@
 				A721FE0120FFEFA600BD7268 /* SHKEmbossColor.fsh in Resources */,
 				CD72480220FEFB96001632D4 /* StickerCollectionViewCell.xib in Resources */,
 				CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */,
+				A7AAF10E20FFF87A00BC36F5 /* weWorkTexture.png in Resources */,
 				A721FE0F20FFEFA600BD7268 /* SHKScreen.fsh in Resources */,
 				A721FDFE20FFEFA600BD7268 /* SHKStaticGrayNoise.fsh in Resources */,
 				CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */,
@@ -478,6 +485,7 @@
 				A721FDF220FFEA3600BD7268 /* SelfieViewController.swift in Sources */,
 				CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */,
 				CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */,
+				A7AAF11020FFFA0D00BC36F5 /* WeWorkSceneController.swift in Sources */,
 				A721FDFA20FFECC800BD7268 /* VirtualFaceContent.swift in Sources */,
 				A793C87120FFB1E900B00168 /* StickerLocationViewController.swift in Sources */,
 				A74F59B820FF65DF00C263FC /* DoWhatYouLoveSceneController.swift in Sources */,
