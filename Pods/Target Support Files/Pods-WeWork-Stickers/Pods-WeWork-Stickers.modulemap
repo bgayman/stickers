@@ -1,0 +1,6 @@
+framework module Pods_WeWork_Stickers {
+  umbrella header "Pods-WeWork-Stickers-umbrella.h"
+
+  export *
+  module * { export * }
+}

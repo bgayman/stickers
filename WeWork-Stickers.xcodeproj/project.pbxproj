@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6E113260A7F8F4ACACD77E /* Pods_WeWork_Stickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C20AB5A7805F62D3A81E621 /* Pods_WeWork_Stickers.framework */; };
 		A721FDF220FFEA3600BD7268 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF120FFEA3600BD7268 /* SelfieViewController.swift */; };
 		A721FDF420FFEB1500BD7268 /* VitualContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */; };
 		A721FDF620FFEB4500BD7268 /* VirualContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FDF520FFEB4500BD7268 /* VirualContentType.swift */; };
@@ -73,6 +74,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60322688D646932FD688043C /* Pods-WeWork-Stickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWork-Stickers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers.debug.xcconfig"; sourceTree = "<group>"; };
+		64B121F3682C36F92C5D1828 /* Pods-WeWork-Stickers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWork-Stickers.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers.release.xcconfig"; sourceTree = "<group>"; };
+		9C20AB5A7805F62D3A81E621 /* Pods_WeWork_Stickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWork_Stickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A721FDF120FFEA3600BD7268 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
 		A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitualContentUpdater.swift; sourceTree = "<group>"; };
 		A721FDF520FFEB4500BD7268 /* VirualContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirualContentType.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6E113260A7F8F4ACACD77E /* Pods_WeWork_Stickers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +164,14 @@
 				CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */,
 			);
 			path = StickerCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		C32F40FE07736F865B36624D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C20AB5A7805F62D3A81E621 /* Pods_WeWork_Stickers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CD4BD01920FC4156009B522F /* Shaders */ = {
@@ -253,6 +266,8 @@
 			children = (
 				CDF9330A20FAB5DB005EC774 /* WeWork-Stickers */,
 				CDF9330920FAB5DB005EC774 /* Products */,
+				CE395FF4DD08B0B889A2EAE3 /* Pods */,
+				C32F40FE07736F865B36624D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,6 +304,15 @@
 			path = "WeWork-Stickers";
 			sourceTree = "<group>";
 		};
+		CE395FF4DD08B0B889A2EAE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60322688D646932FD688043C /* Pods-WeWork-Stickers.debug.xcconfig */,
+				64B121F3682C36F92C5D1828 /* Pods-WeWork-Stickers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDF9331C20FAB5DD005EC774 /* Build configuration list for PBXNativeTarget "WeWork-Stickers" */;
 			buildPhases = (
+				498917B07BDA0137BC6F386B /* [CP] Check Pods Manifest.lock */,
 				CDF9330420FAB5DB005EC774 /* Sources */,
 				CDF9330520FAB5DB005EC774 /* Frameworks */,
 				CDF9330620FAB5DB005EC774 /* Resources */,
+				C866E0F68BDC3EDBCF8D7D48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +426,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		498917B07BDA0137BC6F386B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeWork-Stickers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C866E0F68BDC3EDBCF8D7D48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDF9330420FAB5DB005EC774 /* Sources */ = {
@@ -568,6 +633,7 @@
 		};
 		CDF9331D20FAB5DD005EC774 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60322688D646932FD688043C /* Pods-WeWork-Stickers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
@@ -587,6 +653,7 @@
 		};
 		CDF9331E20FAB5DD005EC774 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64B121F3682C36F92C5D1828 /* Pods-WeWork-Stickers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
