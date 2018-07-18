@@ -24,7 +24,7 @@ final class NewYorkSceneController: NSObject, SceneController {
     
     
     func makeScene() -> SCNScene {
-        return ARScenesBuilder.makeNewYorkScene()
+        return SCNScene(named: "art.scnassets/newYorkScene.scn")!
     }
     
     func animateOn(node: SCNNode) {

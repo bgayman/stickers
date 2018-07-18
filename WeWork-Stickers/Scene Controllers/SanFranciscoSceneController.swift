@@ -8,6 +8,12 @@
 
 import SceneKit
 
+protocol SceneController {
+    func prepare(node: SCNNode)
+    func makeScene() -> SCNScene
+    func animateOn(node: SCNNode)
+}
+
 final class SanFranciscoSceneController: NSObject, SceneController {
     
     let audio = SCNAudioSource(fileNamed: "nautical.wav")!
@@ -15,7 +21,8 @@ final class SanFranciscoSceneController: NSObject, SceneController {
 
     
     func makeScene() -> SCNScene {
-        return ARScenesBuilder.makeSanFranciscoScene()
+        return SCNScene(named: "art.scnassets/sanFranciscoScene.scn")!
+        
     }
     
     func prepare(node: SCNNode) {

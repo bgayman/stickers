@@ -49,7 +49,45 @@ struct Sticker {
         case wikiLink
         case dateAdded
     }
-    
+
+    enum StickerType: String {
+        case chicago
+        case frankfurt
+        case monterrey
+        case montreal
+        case newYork
+        case paris
+        case pride
+        case pride2
+        case sanFrancisco
+        case saoPaulo
+        case telAviv
+        case weWork
+    }
+
+    var sceneController: SceneController {
+        guard let type = StickerType(rawValue: identifier) else {
+            return DoWhatYouLoveSceneController()
+        }
+        switch type {
+        case .chicago,
+             .frankfurt,
+             .monterrey,
+             .montreal,
+             .paris,
+             .pride,
+             .pride2,
+             .saoPaulo,
+             .telAviv,
+             .weWork:
+            return DoWhatYouLoveSceneController()
+        case .newYork:
+            return NewYorkSceneController()
+        case .sanFrancisco:
+            return SanFranciscoSceneController()
+        }
+    }
+
     var dictionaryRepresentation: JSONDictionary {
         return [
             CodingKeys.identifier.rawValue: identifier,
@@ -74,7 +112,10 @@ extension Sticker {
             let wikiLinkValue = dictionary[CodingKeys.wikiLink.rawValue] as? String,
             let wikiLink = URL(string: wikiLinkValue),
             let stickerImage = UIImage(named: imageName)
-        else { return nil }
+        else {
+            dump(dictionary)
+            return nil
+        }
         self.identifier = identifier
         self.title = title
         self.description = description
@@ -89,5 +130,14 @@ extension Sticker {
         if let dateAddedValue = dictionary[CodingKeys.dateAdded.rawValue] as? Double {
             self.dateAdded = Date(timeIntervalSince1970: dateAddedValue)
         }
+    }
+}
+
+extension Sticker: Equatable {
+
+    static func == (lhs: Sticker, rhs: Sticker) -> Bool {
+        return lhs.identifier == rhs.identifier &&
+            lhs.title == rhs.title &&
+            lhs.description == rhs.description
     }
 }

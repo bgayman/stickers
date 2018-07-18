@@ -114,9 +114,35 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-92-qmg">
+                                <rect key="frame" x="20" y="40" width="44" height="44"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CZ5-Dl-iP2">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="775-Nu-7VQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <state key="normal" image="icClose"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="775-Nu-7VQ" firstAttribute="top" secondItem="CZ5-Dl-iP2" secondAttribute="top" id="3AV-K0-NSj"/>
+                                        <constraint firstItem="775-Nu-7VQ" firstAttribute="leading" secondItem="CZ5-Dl-iP2" secondAttribute="leading" id="Nmc-K0-cuq"/>
+                                        <constraint firstAttribute="trailing" secondItem="775-Nu-7VQ" secondAttribute="trailing" id="POb-8X-Wim"/>
+                                        <constraint firstAttribute="bottom" secondItem="775-Nu-7VQ" secondAttribute="bottom" id="TiT-w7-1vn"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="WrL-Jn-8dy"/>
+                                    <constraint firstAttribute="height" constant="44" id="mak-7z-Uwf"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rfJ-92-qmg" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="20" id="AnE-Dm-l5U"/>
+                            <constraint firstItem="rfJ-92-qmg" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="20" id="Dcy-SQ-OBe"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="U0K-SW-4ec" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
@@ -125,6 +151,8 @@
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="775-Nu-7VQ" id="ajD-qW-TZV"/>
+                        <outlet property="closeButtonVisualEffectView" destination="rfJ-92-qmg" id="Oza-W5-RuX"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
@@ -153,6 +181,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icClose" width="28" height="28"/>
         <image name="icStickerSelected" width="28" height="28"/>
         <image name="icStickerUnselected" width="28" height="28"/>
     </resources>

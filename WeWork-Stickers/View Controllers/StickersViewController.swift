@@ -19,6 +19,12 @@ final class StickersViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let stickerScannerViewController = segue.destination as? StickerScannerViewController {
+            stickerScannerViewController.delegate = self
+        }
+    }
     
     // MARK: - Setup -
     private func setupUI() {
@@ -48,7 +54,8 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(StickerCollectionViewCell.self)", for: indexPath) as! StickerCollectionViewCell
-        let sticker = StickerStack.shared.stickers[indexPath.item]
+        var sticker = StickerStack.shared.stickers[indexPath.item]
+        sticker.dateAdded = UserDefaults.appGroup?.date(for: sticker)
         cell.sticker = sticker
         return cell
     }
@@ -60,6 +67,28 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: height, height: height)
+    }
+}
+
+extension StickersViewController: StickerScannerViewControllerDelegate {
+
+    func stickerScannerViewController(_ viewController: StickerScannerViewController, didPressCloseWith addedStickers: [Sticker]) {
+        viewController.dismiss(animated: true) { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            let cells = strongSelf.collectionView.visibleCells.compactMap { $0 as? StickerCollectionViewCell }.filter {
+                guard let sticker = $0.sticker else { return false }
+                return addedStickers.contains(sticker)
+            }
+            cells.forEach { $0.stickerImageView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6) }
+            UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
+                cells.forEach {
+                    $0.stickerImageView.image = $0.sticker?.stickerImage
+                    $0.transform = .identity
+                }
+            })
+        }
     }
 }
 
