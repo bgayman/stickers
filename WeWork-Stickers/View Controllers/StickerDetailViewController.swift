@@ -21,16 +21,6 @@ final class StickerDetailViewController: UIViewController {
         return dateFormatter
     }()
 
-    lazy var shareBarButton: UIBarButtonItem = {
-        let shareBarButton = UIBarButtonItem(image: UIImage(named: "icShare")!, style: .plain, target: self, action: #selector(didPressShare(_:)))
-        return shareBarButton
-    }()
-
-    lazy var locationBarButton: UIBarButtonItem = {
-        let locationBarButton = UIBarButtonItem(image: UIImage(named: "icLocation")!, style: .plain, target: self, action: #selector(didPressLocation(_:)))
-        return locationBarButton
-    }()
-
     // MARK: - Outlets -
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var infoStackView: UIStackView!
@@ -40,6 +30,16 @@ final class StickerDetailViewController: UIViewController {
     
     // MARK: - Properties -
     let sticker: Sticker
+    
+    lazy var shareBarButton: UIBarButtonItem = {
+        let shareBarButton = UIBarButtonItem(image: UIImage(named: "icShare")!, style: .plain, target: self, action: #selector(didPressShare(_:)))
+        return shareBarButton
+    }()
+    
+    lazy var locationBarButton: UIBarButtonItem = {
+        let locationBarButton = UIBarButtonItem(image: UIImage(named: "icLocation")!, style: .plain, target: self, action: #selector(didPressLocation(_:)))
+        return locationBarButton
+    }()
 
     init(sticker: Sticker) {
         self.sticker = sticker
@@ -111,7 +111,7 @@ final class StickerDetailViewController: UIViewController {
         sceneView.scene = scene
         sceneView.backgroundColor = .black
         if let node = scene.rootNode.childNode(withName: "plane", recursively: true) {
-            node.geometry?.firstMaterial?.diffuse.contents = sticker.stickerTextureImage
+            node.geometry?.firstMaterial?.diffuse.contents = sticker.stickerTextureImage ?? sticker.stickerImage
             node.geometry?.firstMaterial?.isDoubleSided = true
             node.geometry?.firstMaterial?.transparency = 1.0
             cameraNode.constraints = [SCNLookAtConstraint(target: node)]

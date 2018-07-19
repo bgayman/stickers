@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelfieImageViewController" customModule="WeWork_Stickers" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="yry-DT-MwW" id="bH1-At-42d"/>
+                <outlet property="closeVisualEffectView" destination="Dd2-BR-MBK" id="P7d-Bo-hTM"/>
+                <outlet property="imageView" destination="ncO-UE-CMl" id="aQm-FB-lxd"/>
+                <outlet property="shareButton" destination="cYW-CP-9lC" id="jrA-hz-3AC"/>
+                <outlet property="shareVisualEffectView" destination="ydk-Uj-vja" id="gx5-pU-Byp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncO-UE-CMl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-BR-MBK">
+                    <rect key="frame" x="20" y="40" width="44" height="44"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cj2-7e-kNE">
+                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yry-DT-MwW">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <state key="normal" image="icClose"/>
+                                <connections>
+                                    <action selector="didPressClose:" destination="-1" eventType="touchUpInside" id="DBw-qB-Ucf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yry-DT-MwW" firstAttribute="top" secondItem="cj2-7e-kNE" secondAttribute="top" id="ICa-b5-LGJ"/>
+                            <constraint firstItem="yry-DT-MwW" firstAttribute="leading" secondItem="cj2-7e-kNE" secondAttribute="leading" id="Pbp-M2-Yj6"/>
+                            <constraint firstAttribute="trailing" secondItem="yry-DT-MwW" secondAttribute="trailing" id="htx-yz-tF2"/>
+                            <constraint firstAttribute="bottom" secondItem="yry-DT-MwW" secondAttribute="bottom" id="jy6-sS-2H1"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="FJH-hh-wak"/>
+                        <constraint firstAttribute="width" constant="44" id="Yir-1p-AVN"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydk-Uj-vja">
+                    <rect key="frame" x="311" y="40" width="44" height="44"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rdd-vr-q05">
+                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYW-CP-9lC">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <state key="normal" image="icShare"/>
+                                <connections>
+                                    <action selector="didPressShare:" destination="-1" eventType="touchUpInside" id="4A2-I5-QXj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cYW-CP-9lC" secondAttribute="bottom" id="5uV-eE-bh0"/>
+                            <constraint firstItem="cYW-CP-9lC" firstAttribute="leading" secondItem="rdd-vr-q05" secondAttribute="leading" id="BIP-Qj-b6Q"/>
+                            <constraint firstItem="cYW-CP-9lC" firstAttribute="top" secondItem="rdd-vr-q05" secondAttribute="top" id="UeW-bF-x81"/>
+                            <constraint firstAttribute="trailing" secondItem="cYW-CP-9lC" secondAttribute="trailing" id="pWy-mY-ZCk"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="iOy-aT-2jG"/>
+                        <constraint firstAttribute="height" constant="44" id="xLN-af-60G"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-EI-unj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xQn-gR-atn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dd2-BR-MBK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="8l6-S3-dOh"/>
+                <constraint firstAttribute="trailing" secondItem="ydk-Uj-vja" secondAttribute="trailing" constant="20" id="9WR-LE-J6B"/>
+                <constraint firstItem="ncO-UE-CMl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AeN-A9-AyZ"/>
+                <constraint firstItem="ncO-UE-CMl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BTz-Ts-TOp"/>
+                <constraint firstAttribute="trailing" secondItem="ncO-UE-CMl" secondAttribute="trailing" id="N9f-yB-Zgg"/>
+                <constraint firstItem="ydk-Uj-vja" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Wkp-MX-YPn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="6ic-EI-unj" secondAttribute="bottom" id="ZKb-6x-90a"/>
+                <constraint firstItem="6ic-EI-unj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sJI-4k-5v5"/>
+                <constraint firstItem="6ic-EI-unj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tBA-1s-N81"/>
+                <constraint firstAttribute="bottom" secondItem="ncO-UE-CMl" secondAttribute="bottom" id="xt6-MN-opM"/>
+                <constraint firstItem="Dd2-BR-MBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ysq-jF-5Hl"/>
+                <constraint firstAttribute="trailing" secondItem="6ic-EI-unj" secondAttribute="trailing" id="zdj-bk-4s3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icClose" width="28" height="28"/>
+        <image name="icShare" width="28" height="28"/>
+    </resources>
+</document>

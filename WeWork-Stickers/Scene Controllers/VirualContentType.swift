@@ -10,13 +10,16 @@ import Foundation
 
 enum VirtualContentType: Int {
     case glasses
+    case stickerMask
 
-    static let orderedValues: [VirtualContentType] = [.glasses]
+    static let orderedValues: [VirtualContentType] = [.glasses, .stickerMask]
 
     var imageName: String {
         switch self {
         case .glasses:
-            return "glasses"
+            return "icGlasses"
+        case .stickerMask:
+            return "icStickerMask"
         }
     }
 }

@@ -9,11 +9,17 @@
 import UIKit
 import SceneKit
 import ARKit
+import iCarousel
 
 final class SelfieViewController: UIViewController, ARSCNViewDelegate {
 
+    // MARK: - Outlets -
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var carousel: iCarousel!
+    
+    // MARK: - Properties -
     lazy var statusViewController: StatusViewController = {
         return children.lazy.compactMap({ $0 as? StatusViewController }).first!
     }()
@@ -32,6 +38,7 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
+    // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +54,13 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
         statusViewController.restartExperienceHandler = { [unowned self] in
             self.restartExperience()
         }
+        
+        carousel.type = .linear
+        carousel.isVertical = false
+        carousel.scrollSpeed = 0.4
+        cameraButton.layer.borderWidth = 4.0
+        cameraButton.layer.borderColor = UIColor.white.cgColor
+        cameraButton.layer.cornerRadius = cameraButton.bounds.height * 0.5
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,11 +77,14 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
+    // MARK: - Setup -
     func createFaceGeometry() {
         let device = sceneView.device!
         let glassesGeometry = ARSCNFaceGeometry(device: device)!
+        let maskGeometry = ARSCNFaceGeometry(device: device)!
         nodeForContentType = [
             .glasses: GlassesOverlay(geometry: glassesGeometry),
+            .stickerMask: Mask(geometry: maskGeometry),
         ]
     }
 
@@ -101,8 +118,20 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
         alertController.addAction(restartAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    private let cameraShutterSoundID: SystemSoundID = 1108
+    
+    @IBAction func didPressCameraButton(_ sender: UIButton) {
+        let image = sceneView.snapshot()
+        AudioServicesPlaySystemSoundWithCompletion(cameraShutterSoundID, nil)
+        let selfieImageViewController = SelfieImageViewController()
+        selfieImageViewController.image = image
+        selfieImageViewController.modalPresentationStyle = .fullScreen
+        present(selfieImageViewController, animated: false)
+    }
 }
 
+// MARK: - ARSessionDelegate -
 extension SelfieViewController: ARSessionDelegate {
 
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -135,5 +164,39 @@ extension SelfieViewController: ARSessionDelegate {
         DispatchQueue.main.async {
             self.resetTracking()
         }
+    }
+}
+
+extension SelfieViewController: iCarouselDelegate {
+    
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+        selectedVirtualContent = VirtualContentType.orderedValues[carousel.currentItemIndex]
+    }
+    
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch option {
+            
+        case .angle, .arc, .count, .fadeMax, .fadeMin, .fadeMinAlpha, .fadeRange, .offsetMultiplier, .showBackfaces, .wrap, .tilt, .visibleItems:
+            return value
+        case .radius:
+            return 90.0 * CGFloat(VirtualContentType.orderedValues.count) * 0.25
+        case .spacing:
+            return value * 1.75
+        }
+    }
+}
+
+// MARK: - iCarouselDataSource -
+extension SelfieViewController: iCarouselDataSource {
+    
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return VirtualContentType.orderedValues.count
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let contentType = VirtualContentType.orderedValues[index]
+        let imageView = UIImageView(image: UIImage(named: contentType.imageName))
+        imageView.tintColor = UIColor.appRed
+        return imageView
     }
 }

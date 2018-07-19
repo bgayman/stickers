@@ -78,14 +78,15 @@ struct Sticker {
         }
         switch type {
         case .frankfurt,
-             .monterrey,
-             .montreal,
              .paris,
              .pride,
-             .pride2,
              .saoPaulo,
              .telAviv:
             return DoWhatYouLoveSceneController()
+        case .monterrey, .montreal:
+            return MonterreySceneController()
+        case .pride2:
+            return Pride2SceneController()
         case .weWork:
             return WeWorkSceneController()
         case .chicago:

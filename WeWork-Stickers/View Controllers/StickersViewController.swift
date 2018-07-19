@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARKit
 
 // MARK: - StickersViewController -
 final class StickersViewController: UIViewController {
@@ -47,6 +48,11 @@ final class StickersViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.appRed
 
         tabBarController?.tabBar.tintColor = UIColor.appRed
+        if !ARFaceTrackingConfiguration.isSupported {
+            var viewControllers = tabBarController?.viewControllers
+            viewControllers?.remove(at: 1)
+            tabBarController?.setViewControllers(viewControllers, animated: false)
+        }
 
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
@@ -67,6 +73,8 @@ final class StickersViewController: UIViewController {
         alertController.addAction(cancel)
         alertController.addAction(delete)
         alertController.popoverPresentationController?.sourceView = view
+        alertController.popoverPresentationController?.sourceRect = CGRect(x: view.bounds.midX - 5.0, y: view.bounds.maxY - 5, width: 10.0, height: 5)
+        alertController.popoverPresentationController?.permittedArrowDirections = [.up]
         alertController.view.tintColor = UIColor.appRed
         present(alertController, animated: true)
     }
