@@ -17,7 +17,6 @@ extension Sticker {
         case .frankfurt,
              .paris,
              .pride,
-             .saoPaulo,
              .telAviv:
             return DoWhatYouLoveSceneController()
         case .monterrey, .montreal:
@@ -32,6 +31,8 @@ extension Sticker {
             return NewYorkSceneController()
         case .sanFrancisco:
             return SanFranciscoSceneController()
+        case .saoPaulo:
+            return SaoPauloSceneController()
         }
     }
 }

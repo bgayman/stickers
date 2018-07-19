@@ -106,6 +106,7 @@
 		CDE41E042100DA0E008B2F8B /* saoPauloStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E032100DA0E008B2F8B /* saoPauloStickerSticker.png */; };
 		CDE41E062100DA20008B2F8B /* telAvivStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E052100DA20008B2F8B /* telAvivStickerSticker.png */; };
 		CDE41E082100DB24008B2F8B /* prideHeartStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E072100DB24008B2F8B /* prideHeartStickerSticker.png */; };
+		CDF303532100F781002068E7 /* SaoPauloSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF303522100F781002068E7 /* SaoPauloSceneController.swift */; };
 		CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */; };
 		CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9330D20FAB5DB005EC774 /* art.scnassets */; };
 		CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */; };
@@ -239,6 +240,7 @@
 		CDE41E052100DA20008B2F8B /* telAvivStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telAvivStickerSticker.png; sourceTree = "<group>"; };
 		CDE41E072100DB24008B2F8B /* prideHeartStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prideHeartStickerSticker.png; sourceTree = "<group>"; };
 		CDE41E092100DBBC008B2F8B /* stickerPack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stickerPack.entitlements; sourceTree = "<group>"; };
+		CDF303522100F781002068E7 /* SaoPauloSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaoPauloSceneController.swift; sourceTree = "<group>"; };
 		CDF9330820FAB5DB005EC774 /* WeWork-Stickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeWork-Stickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF9330D20FAB5DB005EC774 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				CD7247F020FEB3E2001632D4 /* NewYorkSceneController.swift */,
 				A793C87520FFCA1200B00168 /* ChicagoSceneController.swift */,
 				A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */,
+				CDF303522100F781002068E7 /* SaoPauloSceneController.swift */,
 				CDE41DB22100ABFA008B2F8B /* MonterreySceneController.swift */,
 				CDE41DA421001CF2008B2F8B /* Pride2SceneController.swift */,
 				A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */,
@@ -704,6 +707,7 @@
 				CDE41DB32100ABFA008B2F8B /* MonterreySceneController.swift in Sources */,
 				CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */,
 				CDE41D9721001186008B2F8B /* Flag.swift in Sources */,
+				CDF303532100F781002068E7 /* SaoPauloSceneController.swift in Sources */,
 				A721FDF620FFEB4500BD7268 /* VirualContentType.swift in Sources */,
 				CD7247FE20FEF9CF001632D4 /* UIColor+Application.swift in Sources */,
 				CD7247F520FEEEA1001632D4 /* StickerStack.swift in Sources */,
