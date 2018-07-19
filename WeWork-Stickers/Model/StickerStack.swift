@@ -72,32 +72,6 @@ struct Sticker {
         case weWork
     }
 
-    var sceneController: SceneController {
-        guard let type = StickerType(rawValue: identifier) else {
-            return DoWhatYouLoveSceneController()
-        }
-        switch type {
-        case .frankfurt,
-             .paris,
-             .pride,
-             .saoPaulo,
-             .telAviv:
-            return DoWhatYouLoveSceneController()
-        case .monterrey, .montreal:
-            return MonterreySceneController()
-        case .pride2:
-            return Pride2SceneController()
-        case .weWork:
-            return WeWorkSceneController()
-        case .chicago:
-            return ChicagoSceneController()
-        case .newYork:
-            return NewYorkSceneController()
-        case .sanFrancisco:
-            return SanFranciscoSceneController()
-        }
-    }
-
     var dictionaryRepresentation: JSONDictionary {
         return [
             CodingKeys.identifier.rawValue: identifier,

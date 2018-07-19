@@ -80,6 +80,32 @@
 		CDE41DAF2100A05D008B2F8B /* SelfieImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DAD2100A05D008B2F8B /* SelfieImageViewController.xib */; };
 		CDE41DB12100A8A4008B2F8B /* monterreyTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DB02100A8A4008B2F8B /* monterreyTexture.png */; };
 		CDE41DB32100ABFA008B2F8B /* MonterreySceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41DB22100ABFA008B2F8B /* MonterreySceneController.swift */; };
+		CDE41DBA2100C762008B2F8B /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE41DB92100C762008B2F8B /* Messages.framework */; };
+		CDE41DBD2100C762008B2F8B /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41DBC2100C762008B2F8B /* MessagesViewController.swift */; };
+		CDE41DC02100C762008B2F8B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DBE2100C762008B2F8B /* MainInterface.storyboard */; };
+		CDE41DC22100C763008B2F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DC12100C763008B2F8B /* Assets.xcassets */; };
+		CDE41DC62100C763008B2F8B /* stickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDE41DB82100C762008B2F8B /* stickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CDE41DCD2100D058008B2F8B /* StickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41DCB2100D058008B2F8B /* StickerCollectionViewController.swift */; };
+		CDE41DCE2100D058008B2F8B /* StickerCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DCC2100D058008B2F8B /* StickerCollectionViewController.xib */; };
+		CDE41DD12100D107008B2F8B /* MessageStickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41DCF2100D107008B2F8B /* MessageStickerCollectionViewCell.swift */; };
+		CDE41DD22100D107008B2F8B /* MessageStickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DD02100D107008B2F8B /* MessageStickerCollectionViewCell.xib */; };
+		CDE41DD32100D30B008B2F8B /* UIColor+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */; };
+		CDE41DD42100D30F008B2F8B /* UserDefaults+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F59BA20FF713300C263FC /* UserDefaults+Application.swift */; };
+		CDE41DD52100D31D008B2F8B /* Stickers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD7247F220FEE0B8001632D4 /* Stickers.plist */; };
+		CDE41DD62100D321008B2F8B /* StickerStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247F420FEEEA1001632D4 /* StickerStack.swift */; };
+		CDE41DD82100D64F008B2F8B /* Sticker+SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41DD72100D64F008B2F8B /* Sticker+SceneController.swift */; };
+		CDE41DF02100D869008B2F8B /* weWorkStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DEF2100D868008B2F8B /* weWorkStickerSticker.png */; };
+		CDE41DF22100D891008B2F8B /* frankfurtStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DF12100D891008B2F8B /* frankfurtStickerSticker.png */; };
+		CDE41DF42100D8BB008B2F8B /* montrealStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DF32100D8BB008B2F8B /* montrealStickerSticker.png */; };
+		CDE41DF62100D967008B2F8B /* chicagoStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DF52100D967008B2F8B /* chicagoStickerSticker.png */; };
+		CDE41DF82100D987008B2F8B /* monterreyStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DF72100D987008B2F8B /* monterreyStickerSticker.png */; };
+		CDE41DFC2100D9CD008B2F8B /* newYorkStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DFB2100D9CD008B2F8B /* newYorkStickerSticker.png */; };
+		CDE41DFE2100D9D7008B2F8B /* parisStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DFD2100D9D7008B2F8B /* parisStickerSticker.png */; };
+		CDE41E002100D9EA008B2F8B /* prideStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41DFF2100D9EA008B2F8B /* prideStickerSticker.png */; };
+		CDE41E022100D9FE008B2F8B /* sanFranciscoStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E012100D9FE008B2F8B /* sanFranciscoStickerSticker.png */; };
+		CDE41E042100DA0E008B2F8B /* saoPauloStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E032100DA0E008B2F8B /* saoPauloStickerSticker.png */; };
+		CDE41E062100DA20008B2F8B /* telAvivStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E052100DA20008B2F8B /* telAvivStickerSticker.png */; };
+		CDE41E082100DB24008B2F8B /* prideHeartStickerSticker.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE41E072100DB24008B2F8B /* prideHeartStickerSticker.png */; };
 		CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */; };
 		CDF9330E20FAB5DB005EC774 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9330D20FAB5DB005EC774 /* art.scnassets */; };
 		CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9330F20FAB5DB005EC774 /* StickerScannerViewController.swift */; };
@@ -87,6 +113,30 @@
 		CDF9331520FAB5DD005EC774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF9331420FAB5DD005EC774 /* Assets.xcassets */; };
 		CDF9331820FAB5DD005EC774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF9331620FAB5DD005EC774 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDE41DC42100C763008B2F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF9330020FAB5DB005EC774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDE41DB72100C762008B2F8B;
+			remoteInfo = stickerPack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDE41DCA2100C763008B2F8B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CDE41DC62100C763008B2F8B /* stickerPack.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		60322688D646932FD688043C /* Pods-WeWork-Stickers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWork-Stickers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +215,30 @@
 		CDE41DAD2100A05D008B2F8B /* SelfieImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfieImageViewController.xib; sourceTree = "<group>"; };
 		CDE41DB02100A8A4008B2F8B /* monterreyTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monterreyTexture.png; sourceTree = "<group>"; };
 		CDE41DB22100ABFA008B2F8B /* MonterreySceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonterreySceneController.swift; sourceTree = "<group>"; };
+		CDE41DB82100C762008B2F8B /* stickerPack.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = stickerPack.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE41DB92100C762008B2F8B /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		CDE41DBC2100C762008B2F8B /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		CDE41DBF2100C762008B2F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CDE41DC12100C763008B2F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDE41DC32100C763008B2F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE41DCB2100D058008B2F8B /* StickerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewController.swift; sourceTree = "<group>"; };
+		CDE41DCC2100D058008B2F8B /* StickerCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewController.xib; sourceTree = "<group>"; };
+		CDE41DCF2100D107008B2F8B /* MessageStickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDE41DD02100D107008B2F8B /* MessageStickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageStickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDE41DD72100D64F008B2F8B /* Sticker+SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sticker+SceneController.swift"; sourceTree = "<group>"; };
+		CDE41DEF2100D868008B2F8B /* weWorkStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weWorkStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DF12100D891008B2F8B /* frankfurtStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frankfurtStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DF32100D8BB008B2F8B /* montrealStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = montrealStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DF52100D967008B2F8B /* chicagoStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicagoStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DF72100D987008B2F8B /* monterreyStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monterreyStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DFB2100D9CD008B2F8B /* newYorkStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYorkStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DFD2100D9D7008B2F8B /* parisStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parisStickerSticker.png; sourceTree = "<group>"; };
+		CDE41DFF2100D9EA008B2F8B /* prideStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prideStickerSticker.png; sourceTree = "<group>"; };
+		CDE41E012100D9FE008B2F8B /* sanFranciscoStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanFranciscoStickerSticker.png; sourceTree = "<group>"; };
+		CDE41E032100DA0E008B2F8B /* saoPauloStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saoPauloStickerSticker.png; sourceTree = "<group>"; };
+		CDE41E052100DA20008B2F8B /* telAvivStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telAvivStickerSticker.png; sourceTree = "<group>"; };
+		CDE41E072100DB24008B2F8B /* prideHeartStickerSticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prideHeartStickerSticker.png; sourceTree = "<group>"; };
+		CDE41E092100DBBC008B2F8B /* stickerPack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stickerPack.entitlements; sourceTree = "<group>"; };
 		CDF9330820FAB5DB005EC774 /* WeWork-Stickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeWork-Stickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF9330B20FAB5DB005EC774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF9330D20FAB5DB005EC774 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -176,6 +250,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CDE41DB52100C762008B2F8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE41DBA2100C762008B2F8B /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDF9330520FAB5DB005EC774 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				9C20AB5A7805F62D3A81E621 /* Pods_WeWork_Stickers.framework */,
+				CDE41DB92100C762008B2F8B /* Messages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,6 +345,7 @@
 				A721FDF920FFECC800BD7268 /* VirtualFaceContent.swift */,
 				CDE41DA821002DDD008B2F8B /* GlassesOverlay.swift */,
 				CDE41DA621002A54008B2F8B /* MaskOverlay.swift */,
+				CDE41DD72100D64F008B2F8B /* Sticker+SceneController.swift */,
 			);
 			path = "Scene Controllers";
 			sourceTree = "<group>";
@@ -302,10 +386,39 @@
 			path = "Scene Kit Resources";
 			sourceTree = "<group>";
 		};
+		CDE41DBB2100C762008B2F8B /* stickerPack */ = {
+			isa = PBXGroup;
+			children = (
+				CDE41E092100DBBC008B2F8B /* stickerPack.entitlements */,
+				CDE41DBC2100C762008B2F8B /* MessagesViewController.swift */,
+				CDE41DCB2100D058008B2F8B /* StickerCollectionViewController.swift */,
+				CDE41DCC2100D058008B2F8B /* StickerCollectionViewController.xib */,
+				CDE41DCF2100D107008B2F8B /* MessageStickerCollectionViewCell.swift */,
+				CDE41DD02100D107008B2F8B /* MessageStickerCollectionViewCell.xib */,
+				CDE41DBE2100C762008B2F8B /* MainInterface.storyboard */,
+				CDE41DEF2100D868008B2F8B /* weWorkStickerSticker.png */,
+				CDE41DFF2100D9EA008B2F8B /* prideStickerSticker.png */,
+				CDE41E012100D9FE008B2F8B /* sanFranciscoStickerSticker.png */,
+				CDE41E052100DA20008B2F8B /* telAvivStickerSticker.png */,
+				CDE41DFD2100D9D7008B2F8B /* parisStickerSticker.png */,
+				CDE41DF52100D967008B2F8B /* chicagoStickerSticker.png */,
+				CDE41E072100DB24008B2F8B /* prideHeartStickerSticker.png */,
+				CDE41E032100DA0E008B2F8B /* saoPauloStickerSticker.png */,
+				CDE41DFB2100D9CD008B2F8B /* newYorkStickerSticker.png */,
+				CDE41DF12100D891008B2F8B /* frankfurtStickerSticker.png */,
+				CDE41DF32100D8BB008B2F8B /* montrealStickerSticker.png */,
+				CDE41DF72100D987008B2F8B /* monterreyStickerSticker.png */,
+				CDE41DC12100C763008B2F8B /* Assets.xcassets */,
+				CDE41DC32100C763008B2F8B /* Info.plist */,
+			);
+			path = stickerPack;
+			sourceTree = "<group>";
+		};
 		CDF932FF20FAB5DB005EC774 = {
 			isa = PBXGroup;
 			children = (
 				CDF9330A20FAB5DB005EC774 /* WeWork-Stickers */,
+				CDE41DBB2100C762008B2F8B /* stickerPack */,
 				CDF9330920FAB5DB005EC774 /* Products */,
 				CE395FF4DD08B0B889A2EAE3 /* Pods */,
 				C32F40FE07736F865B36624D /* Frameworks */,
@@ -316,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF9330820FAB5DB005EC774 /* WeWork-Stickers.app */,
+				CDE41DB82100C762008B2F8B /* stickerPack.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +475,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CDE41DB72100C762008B2F8B /* stickerPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE41DC72100C763008B2F8B /* Build configuration list for PBXNativeTarget "stickerPack" */;
+			buildPhases = (
+				CDE41DB42100C762008B2F8B /* Sources */,
+				CDE41DB52100C762008B2F8B /* Frameworks */,
+				CDE41DB62100C762008B2F8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stickerPack;
+			productName = stickerPack;
+			productReference = CDE41DB82100C762008B2F8B /* stickerPack.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 		CDF9330720FAB5DB005EC774 /* WeWork-Stickers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDF9331C20FAB5DD005EC774 /* Build configuration list for PBXNativeTarget "WeWork-Stickers" */;
@@ -370,10 +501,12 @@
 				CDF9330520FAB5DB005EC774 /* Frameworks */,
 				CDF9330620FAB5DB005EC774 /* Resources */,
 				C866E0F68BDC3EDBCF8D7D48 /* [CP] Embed Pods Frameworks */,
+				CDE41DCA2100C763008B2F8B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CDE41DC52100C763008B2F8B /* PBXTargetDependency */,
 			);
 			name = "WeWork-Stickers";
 			productName = "WeWork-Stickers";
@@ -390,6 +523,14 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "B Gay";
 				TargetAttributes = {
+					CDE41DB72100C762008B2F8B = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					CDF9330720FAB5DB005EC774 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
@@ -414,11 +555,36 @@
 			projectRoot = "";
 			targets = (
 				CDF9330720FAB5DB005EC774 /* WeWork-Stickers */,
+				CDE41DB72100C762008B2F8B /* stickerPack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CDE41DB62100C762008B2F8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE41DF02100D869008B2F8B /* weWorkStickerSticker.png in Resources */,
+				CDE41E062100DA20008B2F8B /* telAvivStickerSticker.png in Resources */,
+				CDE41DD52100D31D008B2F8B /* Stickers.plist in Resources */,
+				CDE41DC22100C763008B2F8B /* Assets.xcassets in Resources */,
+				CDE41DC02100C762008B2F8B /* MainInterface.storyboard in Resources */,
+				CDE41E082100DB24008B2F8B /* prideHeartStickerSticker.png in Resources */,
+				CDE41E042100DA0E008B2F8B /* saoPauloStickerSticker.png in Resources */,
+				CDE41DD22100D107008B2F8B /* MessageStickerCollectionViewCell.xib in Resources */,
+				CDE41E022100D9FE008B2F8B /* sanFranciscoStickerSticker.png in Resources */,
+				CDE41DF42100D8BB008B2F8B /* montrealStickerSticker.png in Resources */,
+				CDE41DFC2100D9CD008B2F8B /* newYorkStickerSticker.png in Resources */,
+				CDE41DCE2100D058008B2F8B /* StickerCollectionViewController.xib in Resources */,
+				CDE41DF22100D891008B2F8B /* frankfurtStickerSticker.png in Resources */,
+				CDE41DF62100D967008B2F8B /* chicagoStickerSticker.png in Resources */,
+				CDE41DF82100D987008B2F8B /* monterreyStickerSticker.png in Resources */,
+				CDE41DFE2100D9D7008B2F8B /* parisStickerSticker.png in Resources */,
+				CDE41E002100D9EA008B2F8B /* prideStickerSticker.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDF9330620FAB5DB005EC774 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,10 +683,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CDE41DB42100C762008B2F8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE41DD62100D321008B2F8B /* StickerStack.swift in Sources */,
+				CDE41DD32100D30B008B2F8B /* UIColor+Application.swift in Sources */,
+				CDE41DCD2100D058008B2F8B /* StickerCollectionViewController.swift in Sources */,
+				CDE41DBD2100C762008B2F8B /* MessagesViewController.swift in Sources */,
+				CDE41DD12100D107008B2F8B /* MessageStickerCollectionViewCell.swift in Sources */,
+				CDE41DD42100D30F008B2F8B /* UserDefaults+Application.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDF9330420FAB5DB005EC774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE41DD82100D64F008B2F8B /* Sticker+SceneController.swift in Sources */,
 				CDE41DB32100ABFA008B2F8B /* MonterreySceneController.swift in Sources */,
 				CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */,
 				CDE41D9721001186008B2F8B /* Flag.swift in Sources */,
@@ -555,7 +735,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CDE41DC52100C763008B2F8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDE41DB72100C762008B2F8B /* stickerPack */;
+			targetProxy = CDE41DC42100C763008B2F8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		CDE41DBE2100C762008B2F8B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDE41DBF2100C762008B2F8B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		CDF9331120FAB5DB005EC774 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -575,6 +771,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CDE41DC82100C763008B2F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = stickerPack/stickerPack.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
+				INFOPLIST_FILE = stickerPack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bradgayman.WeWork-Stickers.stickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDE41DC92100C763008B2F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = stickerPack/stickerPack.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
+				INFOPLIST_FILE = stickerPack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bradgayman.WeWork-Stickers.stickerPack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CDF9331A20FAB5DD005EC774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -695,6 +933,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60322688D646932FD688043C /* Pods-WeWork-Stickers.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -715,6 +954,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64B121F3682C36F92C5D1828 /* Pods-WeWork-Stickers.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -734,6 +974,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CDE41DC72100C763008B2F8B /* Build configuration list for PBXNativeTarget "stickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE41DC82100C763008B2F8B /* Debug */,
+				CDE41DC92100C763008B2F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CDF9330320FAB5DB005EC774 /* Build configuration list for PBXProject "WeWork-Stickers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

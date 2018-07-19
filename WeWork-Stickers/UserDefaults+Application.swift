@@ -10,7 +10,7 @@ import Foundation
 
 extension UserDefaults {
 
-    static let appGroupID = "com.wework.stickers"
+    static let appGroupID = "group.com.wework.stickers"
 
     static let appGroup = UserDefaults(suiteName: UserDefaults.appGroupID)
 

@@ -68,6 +68,9 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
 
         UIApplication.shared.isIdleTimerDisabled = true
         resetTracking()
+        statusViewController.showMessage("""
+        Raise eyebrows to change content.
+        """, autoHide: false)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
