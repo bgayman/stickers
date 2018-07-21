@@ -61,7 +61,7 @@ final class StickerScannerViewController: UIViewController {
         }
 
         configuration.trackingImages = trackingImages
-        configuration.maximumNumberOfTrackedImages = 1
+        configuration.maximumNumberOfTrackedImages = trackingImages.count
         
         // Run the view's session
         sceneView.session.run(configuration)
@@ -97,7 +97,7 @@ final class StickerScannerViewController: UIViewController {
         infoDescriptionLabel.font = UIFont.appFont(textStyle: .body, weight: .medium)
         infoDescriptionLabel.textAlignment = .center
         infoDescriptionLabel.text = "Scan sticker to add."
-        infoDescriptionLabel.textColor = UIColor.gray.withAlphaComponent(0.8)
+        infoDescriptionLabel.textColor = UIColor.black.withAlphaComponent(0.7)
 
         perform(#selector(dismissInfo(completion:)), with: nil, afterDelay: 2.0)
     }

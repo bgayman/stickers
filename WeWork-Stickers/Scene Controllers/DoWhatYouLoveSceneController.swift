@@ -9,7 +9,7 @@
 import SceneKit
 
 final class DoWhatYouLoveSceneController: NSObject, SceneController {
-    static var count = 0
+    var count = 0
 
     func prepare(node: SCNNode) {
     }
@@ -47,7 +47,7 @@ final class DoWhatYouLoveSceneController: NSObject, SceneController {
         else { return }
         
         let words = [doText, what, you, love]
-        let word = words[DoWhatYouLoveSceneController.count % words.count]
+        let word = words[count % words.count]
         let material = word.geometry?.firstMaterial
         // highlight it
         SCNTransaction.begin()
@@ -55,8 +55,8 @@ final class DoWhatYouLoveSceneController: NSObject, SceneController {
         
         // on completion - unhighlight
         SCNTransaction.completionBlock = {
-            DoWhatYouLoveSceneController.count += 1
-            if DoWhatYouLoveSceneController.count >= words.count && DoWhatYouLoveSceneController.count % words.count == 0 {
+            self.count += 1
+            if self.count >= words.count && self.count % words.count == 0 {
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.75
                 words.forEach {
