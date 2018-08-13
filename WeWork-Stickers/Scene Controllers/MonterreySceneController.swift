@@ -37,7 +37,10 @@ final class MonterreySceneController: NSObject, SceneController {
 final class CalcSceneController: NSObject, SceneController {
     
     func prepare(node: SCNNode) {
-        
+        let root = node.childNode(withName: "calc", recursively: true)
+        let display = root?.childNode(withName: "Display", recursively: true)
+        let scene = CalcDisplayScene()
+        display?.geometry?.firstMaterial?.diffuse.contents = scene
     }
     
     func makeScene() -> SCNScene {

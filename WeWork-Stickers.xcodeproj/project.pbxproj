@@ -51,6 +51,7 @@
 		A79ACAE620FF9C7600793967 /* sanFranciscoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */; };
 		A7AAF10E20FFF87A00BC36F5 /* weWorkTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AAF10D20FFF87A00BC36F5 /* weWorkTexture.png */; };
 		A7AAF11020FFFA0D00BC36F5 /* WeWorkSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */; };
+		A7C2B88A2121DF7F000B9EE3 /* CalcDisplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C2B8892121DF7F000B9EE3 /* CalcDisplayScene.swift */; };
 		CD4BD03520FC4156009B522F /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03420FC4156009B522F /* ShaderKitExtensions.swift */; };
 		CD4BD03720FD6B2B009B522F /* SanFranciscoSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD03620FD6B2B009B522F /* SanFranciscoSceneController.swift */; };
 		CD4BD03920FD6CE9009B522F /* nautical.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD03820FD6CE9009B522F /* nautical.wav */; };
@@ -163,6 +164,7 @@
 		A79ACAE520FF9C7600793967 /* sanFranciscoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanFranciscoTexture.png; sourceTree = "<group>"; };
 		A7AAF10D20FFF87A00BC36F5 /* weWorkTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weWorkTexture.png; sourceTree = "<group>"; };
 		A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeWorkSceneController.swift; sourceTree = "<group>"; };
+		A7C2B8892121DF7F000B9EE3 /* CalcDisplayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcDisplayScene.swift; sourceTree = "<group>"; };
 		CD4BD01A20FC4156009B522F /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
 		CD4BD01B20FC4156009B522F /* SHKInfrared.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
 		CD4BD01C20FC4156009B522F /* SHKWater.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				CDE41DAC2100A05D008B2F8B /* SelfieImageViewController.swift */,
 				CDE41DAD2100A05D008B2F8B /* SelfieImageViewController.xib */,
 				CDD9679F2103834400AB1243 /* ObjectScannerViewController.swift */,
+				A7C2B8892121DF7F000B9EE3 /* CalcDisplayScene.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				CD7247F120FEB3E2001632D4 /* NewYorkSceneController.swift in Sources */,
 				CDE41D99210011C9008B2F8B /* Flag.metal in Sources */,
 				A721FDF820FFEC4C00BD7268 /* StatusViewController.swift in Sources */,
+				A7C2B88A2121DF7F000B9EE3 /* CalcDisplayScene.swift in Sources */,
 				CDF9330C20FAB5DB005EC774 /* AppDelegate.swift in Sources */,
 				CDE41DA721002A54008B2F8B /* MaskOverlay.swift in Sources */,
 				CDE41DA521001CF2008B2F8B /* Pride2SceneController.swift in Sources */,
