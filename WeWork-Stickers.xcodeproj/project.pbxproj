@@ -67,6 +67,8 @@
 		CD7247FE20FEF9CF001632D4 /* UIColor+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */; };
 		CD72480120FEFB96001632D4 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7247FF20FEFB96001632D4 /* StickerCollectionViewCell.swift */; };
 		CD72480220FEFB96001632D4 /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */; };
+		CDA70208210747C800E6D151 /* MetalCupSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA70207210747C800E6D151 /* MetalCupSceneController.swift */; };
+		CDD967A02103834400AB1243 /* ObjectScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD9679F2103834400AB1243 /* ObjectScannerViewController.swift */; };
 		CDE41D9721001186008B2F8B /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41D9621001186008B2F8B /* Flag.swift */; };
 		CDE41D99210011C9008B2F8B /* Flag.metal in Sources */ = {isa = PBXBuildFile; fileRef = CDE41D98210011C9008B2F8B /* Flag.metal */; };
 		CDE41D9B21001239008B2F8B /* SCNNode+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE41D9A21001239008B2F8B /* SCNNode+Helpers.swift */; };
@@ -203,6 +205,8 @@
 		CD7247FD20FEF9CF001632D4 /* UIColor+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Application.swift"; sourceTree = "<group>"; };
 		CD7247FF20FEFB96001632D4 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD72480020FEFB96001632D4 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDA70207210747C800E6D151 /* MetalCupSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCupSceneController.swift; sourceTree = "<group>"; };
+		CDD9679F2103834400AB1243 /* ObjectScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectScannerViewController.swift; sourceTree = "<group>"; };
 		CDE41D9621001186008B2F8B /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		CDE41D98210011C9008B2F8B /* Flag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Flag.metal; sourceTree = "<group>"; };
 		CDE41D9A21001239008B2F8B /* SCNNode+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Helpers.swift"; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 				A7AAF10F20FFFA0D00BC36F5 /* WeWorkSceneController.swift */,
 				CDF303522100F781002068E7 /* SaoPauloSceneController.swift */,
 				CDE41DB22100ABFA008B2F8B /* MonterreySceneController.swift */,
+				CDA70207210747C800E6D151 /* MetalCupSceneController.swift */,
 				CDE41DA421001CF2008B2F8B /* Pride2SceneController.swift */,
 				A74F59B720FF65DF00C263FC /* DoWhatYouLoveSceneController.swift */,
 				A721FDF320FFEB1500BD7268 /* VitualContentUpdater.swift */,
@@ -367,6 +372,7 @@
 				A721FDF720FFEC4C00BD7268 /* StatusViewController.swift */,
 				CDE41DAC2100A05D008B2F8B /* SelfieImageViewController.swift */,
 				CDE41DAD2100A05D008B2F8B /* SelfieImageViewController.xib */,
+				CDD9679F2103834400AB1243 /* ObjectScannerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 				CDF9330620FAB5DB005EC774 /* Resources */,
 				C866E0F68BDC3EDBCF8D7D48 /* [CP] Embed Pods Frameworks */,
 				CDE41DCA2100C763008B2F8B /* Embed App Extensions */,
+				CB4A2D4EDAD3FA135BEC5C4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -662,7 +669,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C866E0F68BDC3EDBCF8D7D48 /* [CP] Embed Pods Frameworks */ = {
@@ -681,6 +688,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB4A2D4EDAD3FA135BEC5C4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeWork-Stickers/Pods-WeWork-Stickers-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -723,11 +745,13 @@
 				A793C87120FFB1E900B00168 /* StickerLocationViewController.swift in Sources */,
 				A74F59B820FF65DF00C263FC /* DoWhatYouLoveSceneController.swift in Sources */,
 				CDF9331020FAB5DB005EC774 /* StickerScannerViewController.swift in Sources */,
+				CDD967A02103834400AB1243 /* ObjectScannerViewController.swift in Sources */,
 				A74F59BB20FF713300C263FC /* UserDefaults+Application.swift in Sources */,
 				A721FDF420FFEB1500BD7268 /* VitualContentUpdater.swift in Sources */,
 				CD7247F720FEF60F001632D4 /* StickersViewController.swift in Sources */,
 				A74F59BF20FF936100C263FC /* StickerDetailViewController.swift in Sources */,
 				A793C87620FFCA1200B00168 /* ChicagoSceneController.swift in Sources */,
+				CDA70208210747C800E6D151 /* MetalCupSceneController.swift in Sources */,
 				CD7247F120FEB3E2001632D4 /* NewYorkSceneController.swift in Sources */,
 				CDE41D99210011C9008B2F8B /* Flag.metal in Sources */,
 				A721FDF820FFEC4C00BD7268 /* StatusViewController.swift in Sources */,
@@ -781,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = stickerPack/stickerPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = stickerPack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -802,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_ENTITLEMENTS = stickerPack/stickerPack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = stickerPack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -941,7 +965,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = "WeWork-Stickers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -962,7 +986,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WeWork-Stickers/WeWork-Stickers.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = "WeWork-Stickers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

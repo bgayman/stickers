@@ -82,6 +82,7 @@
                     <connections>
                         <segue destination="QHi-FX-Pdr" kind="relationship" relationship="viewControllers" id="00k-5n-SJL"/>
                         <segue destination="OTk-XX-Njk" kind="relationship" relationship="viewControllers" id="wfB-Jb-TWs"/>
+                        <segue destination="Nsy-QK-1GZ" kind="relationship" relationship="viewControllers" id="TWe-ve-KUJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83d-3V-HPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -349,6 +350,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdf-pU-KZM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1476" y="282"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2uK-Z8-7j1">
+            <objects>
+                <viewController id="Nsy-QK-1GZ" customClass="ObjectScannerViewController" customModule="WeWork_Stickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBe-pR-Ktm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-Jl-HZq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-7o-rbm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jEZ-qB-vbR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aOK-7o-rbm" firstAttribute="top" secondItem="mBe-pR-Ktm" secondAttribute="top" id="1EG-r3-WNq"/>
+                            <constraint firstAttribute="trailing" secondItem="aOK-7o-rbm" secondAttribute="trailing" id="Ah0-rw-lnr"/>
+                            <constraint firstItem="Epl-BD-S2h" firstAttribute="top" secondItem="aOK-7o-rbm" secondAttribute="bottom" id="TZL-5h-j8p"/>
+                            <constraint firstItem="pSR-Jl-HZq" firstAttribute="top" secondItem="mBe-pR-Ktm" secondAttribute="top" id="VYl-FH-TLE"/>
+                            <constraint firstItem="pSR-Jl-HZq" firstAttribute="leading" secondItem="mBe-pR-Ktm" secondAttribute="leading" id="f6t-Lr-Kwi"/>
+                            <constraint firstAttribute="bottom" secondItem="pSR-Jl-HZq" secondAttribute="bottom" id="s0X-dz-868"/>
+                            <constraint firstItem="aOK-7o-rbm" firstAttribute="leading" secondItem="mBe-pR-Ktm" secondAttribute="leading" id="u8h-5t-kuE"/>
+                            <constraint firstAttribute="trailing" secondItem="pSR-Jl-HZq" secondAttribute="trailing" id="vXO-BB-bfG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Epl-BD-S2h"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="w5y-sM-eMY"/>
+                    <connections>
+                        <outlet property="sceneView" destination="pSR-Jl-HZq" id="k4y-A8-eoM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CU-as-wwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1415" y="1042"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="Z0h-KM-ZOC">

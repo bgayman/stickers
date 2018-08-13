@@ -7,5 +7,5 @@ target 'WeWork-Stickers' do
 
   # Pods for WeWork-Stickers
   pod 'iCarousel'
-
+  pod 'Vivid'
 end

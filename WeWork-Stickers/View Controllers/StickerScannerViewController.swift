@@ -13,6 +13,7 @@ import ARKit
 // MARK: - ARImageGroupName -
 struct ARImageGroupName {
     static let stickers = "Stickers"
+    static let objects = "Objects"
 }
 
 protocol StickerScannerViewControllerDelegate: AnyObject {
@@ -154,6 +155,7 @@ final class StickerScannerViewController: UIViewController {
         }
 
         configuration.trackingImages = trackingImages
+        configuration.isLightEstimationEnabled = true
         configuration.maximumNumberOfTrackedImages = 1
 
         // Run the view's session
@@ -169,7 +171,7 @@ extension StickerScannerViewController: ARSCNViewDelegate {
         guard let anchor = anchor as? ARImageAnchor else { return nil }
         print(anchor.name ?? "NoName")
         guard let sticker = StickerStack.shared.stickers.first(where: { $0.identifier == anchor.name}) else {
-            return SCNNode()
+            return CalcSceneController().makeScene().rootNode
         }
         if UserDefaults.appGroup?.date(for: sticker) == nil {
             UserDefaults.appGroup?.add(sticker)

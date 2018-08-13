@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 import iCarousel
+import Vivid
 
 final class SelfieViewController: UIViewController, ARSCNViewDelegate {
 
@@ -23,11 +24,18 @@ final class SelfieViewController: UIViewController, ARSCNViewDelegate {
     lazy var statusViewController: StatusViewController = {
         return children.lazy.compactMap({ $0 as? StatusViewController }).first!
     }()
+    
+    lazy var context: CIContext = {
+        let context = CIContext(mtlDevice: sceneView.device!)
+        return context
+    }()
 
     var session: ARSession {
         return sceneView.session
     }
 
+    let filterQueue = DispatchQueue(label: "com.wework.stickerFilterQueue")
+    var currentBuffer: CVPixelBuffer?
     var nodeForContentType = [VirtualContentType: VirtualFaceNode]()
 
     let contentUpdater = VirtualContentUpdater()
@@ -168,6 +176,25 @@ extension SelfieViewController: ARSessionDelegate {
             self.resetTracking()
         }
     }
+    
+//    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+//        guard currentBuffer == nil, case .normal = frame.camera.trackingState else {
+//            return
+//        }
+//        let orient = UIApplication.shared.statusBarOrientation
+//        let viewportSize = sceneView.bounds.size
+//        let transform = frame.displayTransform(for: orient, viewportSize: viewportSize).inverted()
+//        self.currentBuffer = frame.capturedImage
+//        filterQueue.async {
+//            defer { self.currentBuffer = nil }
+//            let image = CIImage(cvPixelBuffer: self.currentBuffer!).transformed(by: transform)
+//            let filter = CIFilter(name: "CIGaussianBlur")
+//            filter?.setValue(10.0, forKey: "inputRadius")
+//            filter?.setValue(image, forKey: "inputImage")
+//            let output = filter?.outputImage
+//            self.sceneView.scene.background.contents = self.context.createCGImage(output!, from: image.extent)
+//        }
+//    }
 }
 
 extension SelfieViewController: iCarouselDelegate {

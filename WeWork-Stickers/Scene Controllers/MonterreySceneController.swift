@@ -33,3 +33,32 @@ final class MonterreySceneController: NSObject, SceneController {
     
     static var count = 0
 }
+
+final class CalcSceneController: NSObject, SceneController {
+    
+    func prepare(node: SCNNode) {
+        
+    }
+    
+    func makeScene() -> SCNScene {
+        return SCNScene(named: "art.scnassets/calc.scn")!
+    }
+    
+    func animateOn(node: SCNNode) {
+        let root = node.childNode(withName: "calc", recursively: true)
+        
+        SCNTransaction.begin()
+        SCNTransaction.animationDuration = 0.5
+        root?.scale = SCNVector3(0.022, 0.022, 0.022)
+        SCNTransaction.completionBlock = {
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 0.5
+            let buttons = root?.childNode(withName: "Buttons", recursively: true)
+            buttons?.scale.y = 1
+            SCNTransaction.commit()
+        }
+        SCNTransaction.commit()
+    }
+    
+    static var count = 0
+}

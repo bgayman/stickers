@@ -1,16 +1,15 @@
 PODS:
   - iCarousel (1.8.3)
+  - Vivid (0.9)
 
 DEPENDENCIES:
   - iCarousel
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - iCarousel
+  - Vivid
 
 SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  Vivid: 0fde7409beac71224deb151dd78f98a5bb860497
 
-PODFILE CHECKSUM: 3117219f9cf9f0ce7aa2af5da209fc82b85852d2
+PODFILE CHECKSUM: 1175a12dead39ade51d75432f7a10b6d169286b7
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.2.1
